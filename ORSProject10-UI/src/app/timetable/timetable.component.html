@@ -1,13 +1,12 @@
 <app-navbar></app-navbar>
 
 <style>
-  .grad{
- background-image: linear-gradient(to bottom right, rgb(32, 168, 168), rgb(219, 231, 237));
- background-repeat: no repeat;
- background-size: 100%;
- padding-bottom: 25px
- ;
- }
+  .grad {
+    background-image: linear-gradient(to bottom right, rgb(32, 168, 168), rgb(219, 231, 237));
+    background-repeat: no repeat;
+    background-size: 100%;
+    padding-bottom: 25px;
+  }
 </style>
 
 <div class="row " style="padding-top: 6%; padding-bottom:5%;
@@ -27,6 +26,15 @@ background-size: cover;width:auto;
             <button type="button" class="close" data-dismiss="alert">&times;</button>
             {{form.message}}
           </div>
+
+          <div *ngIf="form.error && form.message && form.message != 'Invalid ID or Password'
+                  && form.message != 'Your Session has been Expired! Please Re-Login'"
+            class="alert alert-danger alert-dismissible">
+
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            {{ form.message }}
+          </div>
+
           <div *ngIf="!form.error && form.message != null" class="alert alert-success alert-dismissible">
             <button type="button" class="close" data-dismiss="alert">&times;</button>
             {{form.message}}
@@ -40,14 +48,13 @@ background-size: cover;width:auto;
                 <div class="input-group-prepend">
                   <div class="input-group-text"><i class="fa fa-file grey-text"></i> </div>
                 </div>
-                <select class="form-control" name="courseId" [(ngModel)]="form.data.courseId"
-                  style="cursor: pointer;">
+                <select class="form-control" name="courseId" [(ngModel)]="form.data.courseId" style="cursor: pointer;">
                   <option [ngValue]="" value="undefined">{{' Select Course' | translate }}</option>
                   <option *ngFor="let obj of form.preload.courseList" [value]="obj.key">{{obj.value}}</option>
                 </select>
               </div>
             </div>
-          
+
           </div>
 
           <div style="padding-top:3%">
@@ -58,9 +65,10 @@ background-size: cover;width:auto;
                 <div class="input-group-prepend">
                   <div class="input-group-text"><i class="fa fa-globe grey-text"></i> </div>
                 </div>
-                <select class="form-control" name="subjectId" [(ngModel)]="form.data.subjectId" style="cursor: pointer;">
+                <select class="form-control" name="subjectId" [(ngModel)]="form.data.subjectId"
+                  style="cursor: pointer;">
                   <option [ngValue]="" value="undefined">{{' Select Subject' | translate }}</option>
-            
+
                   <option *ngFor="let obj of form.preload.subjectList" [value]="obj.key">{{obj.value}}</option>
                 </select>
               </div>
@@ -101,8 +109,8 @@ background-size: cover;width:auto;
                   <div class="input-group-text"><i class="fa fa-table grey-text"></i> </div>
                 </div>
                 <input type="date" name="examDate" [value]="form.data.examDate | date:'yyyy-MM-dd'"
-                (input)="form.data.examDate=parseDate($event.target.value)"
-                class="form-control form-control-sm" required />
+                  (input)="form.data.examDate=parseDate($event.target.value)" class="form-control form-control-sm"
+                  required />
               </div>
               <span class="alertRedColor"> {{form.inputerror.examDate}} </span>
             </div>
@@ -118,7 +126,7 @@ background-size: cover;width:auto;
                 </div>
                 <select class="form-control" name="examTime" [(ngModel)]="form.data.examTime">
                   <option [ngValue]="" value="undefined">{{' Select examTime' | translate }}</option>
-            
+
                   <option selected disabled>{{'Please select' | translate }}</option>
                   <option value="08:00 AM to 11:00 AM">08:00 AM to 11:00 AM</option>
                   <option value="12:00PM to 3:00PM">12:00PM to 3:00PM</option>
@@ -137,7 +145,7 @@ background-size: cover;width:auto;
                 <div class="input-group-prepend">
                   <div class="input-group-text"><i class="fa fa-bars grey-text "></i> </div>
                 </div>
-                <textarea  name="description" [(ngModel)]="form.data.description" class="form-control"
+                <textarea name="description" [(ngModel)]="form.data.description" class="form-control"
                   placeholder="{{'Enter Description' | translate }}"></textarea>
               </div>
             </div>
@@ -146,17 +154,18 @@ background-size: cover;width:auto;
 
           <div class="row pt-3 pl-3 pb-3">
             <div class="pt-2">
-              <button *ngIf="!form.data.id>0"  (click)="submit()" [disabled]="!validate()" class="btn btn-success mr-2">
+              <button *ngIf="!form.data.id>0" (click)="submit()" [disabled]="!validate()" class="btn btn-success mr-2">
                 {{'Save' | translate }}</button>
             </div>
             <div class="pt-2">
-              <button  *ngIf="form.data.id>0"  (click)="submit()" class="btn btn-success mr-2">
-              {{'Update' | translate }}</button>
+              <button *ngIf="form.data.id>0" (click)="submit()" class="btn btn-success mr-2">
+                {{'Update' | translate }}</button>
             </div>
-           
-           
+
+
             <div class="pl-3 pt-2">
-              <button (click)="forward('/timetablelist')" type="button" class="btn btn-warning mr-1">{{'List' | translate }}
+              <button (click)="forward('/timetablelist')" type="button" class="btn btn-warning mr-1">{{'List' |
+                translate }}
               </button>
             </div>
           </div>

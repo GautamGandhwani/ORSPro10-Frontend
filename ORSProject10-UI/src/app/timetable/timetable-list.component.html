@@ -29,7 +29,7 @@ background-size: cover;width:auto;
 
         </div>
 
-        
+
         <div class="col-sm-2">
           <!-- <input type="text" class="form-control" [(ngModel)]="form.searchParams.status" placeholder="{{'Search Status' | translate}}"> -->
         </div>
@@ -52,6 +52,15 @@ background-size: cover;width:auto;
         <button type="button" class="close" data-dismiss="alert">&times;</button>
         {{form.message}}
       </div>
+
+      <div *ngIf="form.error && form.message && form.message != 'Invalid ID or Password'
+                  && form.message != 'Your Session has been Expired! Please Re-Login'"
+        class="alert alert-danger alert-dismissible">
+
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        {{ form.message }}
+      </div>
+
       <div *ngIf="!form.error && form.message != null" class="alert alert-success alert-dismissible">
         <button type="button" class="close" data-dismiss="alert">&times;</button>
         {{form.message}}
@@ -76,9 +85,10 @@ background-size: cover;width:auto;
               </tr>
             </thead>
             <tbody>
-              
+
               <tr *ngFor="let m of form.list; let i = index;">
-                <td> <input type="checkbox" #checkboxes (change)="checklistUpdate()" name="list_name" id="{{m.id}}" value="{{isMasterSel}}" />
+                <td> <input type="checkbox" #checkboxes (change)="checklistUpdate()" name="list_name" id="{{m.id}}"
+                    value="{{isMasterSel}}" />
                 </td>
                 <td> {{(form.pageNo*5)+i+ 1}} </td>
                 <td> {{ m.semester }} </td>
@@ -103,20 +113,23 @@ background-size: cover;width:auto;
           <table style="width: 100%;">
             <tr>
               <td style="width: 50%;">
-          <button (click)="previous()" [disabled]="form.pageNo == 0" class="btn btn-info"> {{'Previous' | translate
-            }} </button></td>
-            <td *ngIf="form.list.length!=0" style="width: 50%;"></td>
-            <td *ngIf="form.list.length==0" style="width: 50%;"><a class="btn btn-warning mr-1" [routerLink]="['/timetablelist']"  (click)="exit()">{{'Back' | translate}}</a></td>
+                <button (click)="previous()" [disabled]="form.pageNo == 0" class="btn btn-info"> {{'Previous' |
+                  translate
+                  }} </button>
+              </td>
+              <td *ngIf="form.list.length!=0" style="width: 50%;"></td>
+              <td *ngIf="form.list.length==0" style="width: 50%;"><a class="btn btn-warning mr-1"
+                  [routerLink]="['/timetablelist']" (click)="exit()">{{'Back' | translate}}</a></td>
 
 
-        
-            <td><button (click)="next()" [disabled]="nextList==0" type="button" class="btn btn-info"> {{'Next' |
-              translate }}</button></td>
+
+              <td><button (click)="next()" [disabled]="nextList==0" type="button" class="btn btn-info"> {{'Next' |
+                  translate }}</button></td>
             </tr>
-            </table>
+          </table>
 
-              
-            
+
+
         </div>
       </div>
 
