@@ -60,6 +60,10 @@ import { EmployeeComponent } from './employee/employee.component';
 import { EmployeeListComponent } from './employee/employee-list.component';
 import { CompensationComponent } from './compensation/compensation.component';
 import { CompensationlistComponent } from './compensation/compensationlist.component';
+import { SettingComponent } from './setting/setting.component';
+import { SettingListComponent } from './setting/setting-list.component';
+import { CouponComponent } from './coupon/coupon.component';
+import { CouponListComponent } from './coupon/coupon-list.component';
 
 
 
@@ -117,6 +121,10 @@ export function myHttpLoader(http: HttpClient) {
     EmployeeListComponent,
     CompensationComponent,
     CompensationlistComponent,
+    SettingComponent,
+    SettingListComponent,
+    CouponComponent,
+    CouponListComponent,
     
   ],
   imports: [

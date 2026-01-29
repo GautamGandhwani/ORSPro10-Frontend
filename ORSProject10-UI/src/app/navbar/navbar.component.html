@@ -77,13 +77,45 @@
   <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#navbarNav"
     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
-</button>
+  </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="nav navbar-nav ml-auto" style="padding-right: 5%;">
 
+      <!-- =================================== COUPON =========================================== -->
+
+      <li class="nav-item dropdown" style="padding-left: 5px">
+        <a class="nav-link dropdown-toggle" [routerLink]="['/#']" id="navbarDropdown" role="button"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <font style="color: white">{{ "Coupon" | translate }}</font>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" [routerLink]="['/coupon']"><i class="fa fa-university"></i> &nbsp;
+            {{ "Add Coupon" | translate }}</a>
+          <a class="dropdown-item" [routerLink]="['/couponlist']"><i class="fa fa-building"></i> &nbsp;
+            {{ "Coupon List" | translate }}
+          </a>
+        </div>
+      </li>
+
+      <!-- =================================== Setting =========================================== -->
+
+      <!-- <li class="nav-item dropdown" style="padding-left: 5px">
+        <a class="nav-link dropdown-toggle" [routerLink]="['/#']" id="navbarDropdown" role="button"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <font style="color: white">{{ "Setting" | translate }}</font>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" [routerLink]="['/setting']"><i class="fa fa-university"></i> &nbsp;
+            {{ "Add Setting" | translate }}</a>
+          <a class="dropdown-item" [routerLink]="['/settinglist']"><i class="fa fa-building"></i> &nbsp;
+            {{ "Setting List" | translate }}
+          </a>
+        </div>
+      </li> -->
+
       <!-- =================================== Compensation =========================================== -->
 
-    <li class="nav-item dropdown" style="padding-left: 5px">
+      <li class="nav-item dropdown" style="padding-left: 5px">
         <a class="nav-link dropdown-toggle" [routerLink]="['/#']" id="navbarDropdown" role="button"
           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <font style="color: white">{{ "Compensation" | translate }}</font>

@@ -24,4 +24,6 @@ export class EndpointServiceService {
   public CUSTOMER = this.SERVER_URL + "/Customer";
   public EMPLOYEE = this.SERVER_URL + "/Employee";
   public COMPENSATION = this.SERVER_URL + "/Compensation";
+  public SETTING = this.SERVER_URL + "/Setting";
+  public COUPON = this.SERVER_URL + "/Coupon";
 }

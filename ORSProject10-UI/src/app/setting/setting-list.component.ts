@@ -5,13 +5,13 @@ import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'app-compensationlist',
-  templateUrl: './compensationlist.component.html',
-  styleUrls: ['./compensationlist.component.css']
+  selector: 'app-setting-list',
+  templateUrl: './setting-list.component.html',
+  styleUrls: ['./setting-list.component.css']
 })
-export class CompensationlistComponent extends BaseListCtl implements OnInit {
+export class SettingListComponent extends BaseListCtl {
 
-public form = {
+  public form = {
     error: false,
     message: null,
     preload: [],
@@ -24,7 +24,6 @@ public form = {
   };
 
   constructor(public locator: ServiceLocatorService, public route: ActivatedRoute, private httpClient: HttpClient) {
-      super(locator.endpoints.COMPENSATION, locator, route) ; 
+    super(locator.endpoints.SETTING, locator, route);
   }
-
 }

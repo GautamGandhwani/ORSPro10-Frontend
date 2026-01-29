@@ -41,6 +41,10 @@ import { CustomerlistComponent } from './customer/customer-list.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { CompensationComponent } from './compensation/compensation.component';
 import { CompensationlistComponent } from './compensation/compensationlist.component';
+import { SettingComponent } from './setting/setting.component';
+import { SettingListComponent } from './setting/setting-list.component';
+import { CouponComponent } from './coupon/coupon.component';
+import { CouponListComponent } from './coupon/coupon-list.component';
 
 
 
@@ -59,6 +63,34 @@ const routes: Routes = [
     {
         path: 'employee',
         component: EmployeeComponent
+    },
+
+    // ***********COUPON*************
+    {
+        path: 'coupon',
+        component: CouponComponent
+    },
+    {
+        path:'couponlist',
+        component:CouponListComponent
+    },
+    {
+        path:'coupon/:id',
+        component:CouponComponent
+    },
+
+    // ***********SETTING*************
+    {
+        path: 'setting',
+        component: SettingComponent
+    },
+    {
+        path:'settinglist',
+        component:SettingListComponent
+    },
+    {
+        path:'setting/:id',
+        component:SettingComponent
     },
 
     //************Compensation************
