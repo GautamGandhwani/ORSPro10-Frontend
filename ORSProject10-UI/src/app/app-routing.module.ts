@@ -45,6 +45,8 @@ import { SettingComponent } from './setting/setting.component';
 import { SettingListComponent } from './setting/setting-list.component';
 import { CouponComponent } from './coupon/coupon.component';
 import { CouponListComponent } from './coupon/coupon-list.component';
+import { InquiryComponent } from './inquiry/inquiry.component';
+import { InquiryListComponent } from './inquiry/inquiry-list.component';
 
 
 
@@ -63,6 +65,20 @@ const routes: Routes = [
     {
         path: 'employee',
         component: EmployeeComponent
+    },
+
+     // ***********INQUIRY*************
+    {
+        path: 'inquiry',
+        component: InquiryComponent
+    },
+    {
+        path:'inquirylist',
+        component:InquiryListComponent
+    },
+    {
+        path:'inquiry/:id',
+        component:InquiryComponent
     },
 
     // ***********COUPON*************

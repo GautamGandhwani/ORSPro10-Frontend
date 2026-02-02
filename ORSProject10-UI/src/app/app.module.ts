@@ -64,6 +64,8 @@ import { SettingComponent } from './setting/setting.component';
 import { SettingListComponent } from './setting/setting-list.component';
 import { CouponComponent } from './coupon/coupon.component';
 import { CouponListComponent } from './coupon/coupon-list.component';
+import { InquiryComponent } from './inquiry/inquiry.component';
+import { InquiryListComponent } from './inquiry/inquiry-list.component';
 
 
 
@@ -125,6 +127,8 @@ export function myHttpLoader(http: HttpClient) {
     SettingListComponent,
     CouponComponent,
     CouponListComponent,
+    InquiryComponent,
+    InquiryListComponent,
     
   ],
   imports: [

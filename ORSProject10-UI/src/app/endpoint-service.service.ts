@@ -26,4 +26,5 @@ export class EndpointServiceService {
   public COMPENSATION = this.SERVER_URL + "/Compensation";
   public SETTING = this.SERVER_URL + "/Setting";
   public COUPON = this.SERVER_URL + "/Coupon";
+  public INQUIRY = this.SERVER_URL + "/Inquiry";
 }
