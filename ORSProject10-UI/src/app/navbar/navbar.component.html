@@ -81,6 +81,22 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="nav navbar-nav ml-auto" style="padding-right: 5%;">
 
+      <!-- =================================== SHOPPING =========================================== -->
+
+      <li class="nav-item dropdown" style="padding-left: 5px">
+        <a class="nav-link dropdown-toggle" [routerLink]="['/#']" id="navbarDropdown" role="button"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <font style="color: white">{{ "Shopping" | translate }}</font>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" [routerLink]="['/shopping']"><i class="fa fa-university"></i> &nbsp;
+            {{ "Add Shopping" | translate }}</a>
+          <a class="dropdown-item" [routerLink]="['/shoppinglist']"><i class="fa fa-building"></i> &nbsp;
+            {{ "Shopping List" | translate }}
+          </a>
+        </div>
+      </li>
+
       <!-- =================================== INQUIRY =========================================== -->
 
       <li class="nav-item dropdown" style="padding-left: 5px">
@@ -90,7 +106,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" [routerLink]="['/inquiry']"><i class="fa fa-university"></i> &nbsp;
-            {{ "Add Coupon" | translate }}</a>
+            {{ "Add Inquiry" | translate }}</a>
           <a class="dropdown-item" [routerLink]="['/inquirylist']"><i class="fa fa-building"></i> &nbsp;
             {{ "Inquiry List" | translate }}
           </a>

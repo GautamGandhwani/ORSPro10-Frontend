@@ -66,6 +66,8 @@ import { CouponComponent } from './coupon/coupon.component';
 import { CouponListComponent } from './coupon/coupon-list.component';
 import { InquiryComponent } from './inquiry/inquiry.component';
 import { InquiryListComponent } from './inquiry/inquiry-list.component';
+import { ShoppingComponent } from './shopping/shopping.component';
+import { ShoppingListComponent } from './shopping/shopping-list.component';
 
 
 
@@ -129,6 +131,8 @@ export function myHttpLoader(http: HttpClient) {
     CouponListComponent,
     InquiryComponent,
     InquiryListComponent,
+    ShoppingComponent,
+    ShoppingListComponent,
     
   ],
   imports: [
