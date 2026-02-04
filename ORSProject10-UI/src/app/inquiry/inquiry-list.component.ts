@@ -11,22 +11,7 @@ import { BaseListCtl } from '../base-list.component';
 })
 export class InquiryListComponent extends BaseListCtl{
 
-  public form = {
-    error: false,
-    message: null,
-    preload: [],
-    data: { id: null },
-    inputerror: {},
-    searchParams: {},
-    searchMessage: null,
-    list: [],
-    pageNo: 0
-  };
-
   constructor(public locator: ServiceLocatorService, public route: ActivatedRoute, private httpClient: HttpClient) {
         super(locator.endpoints.INQUIRY, locator, route) ; 
     }
-
-
-
 }
