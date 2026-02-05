@@ -22,7 +22,6 @@ export class CourseComponent extends BaseCtl {
     return this.validateForm(this.form.data);
   }
  
-
   validateForm(form) {
     let flag = true;
     let validator = this.serviceLocator.dataValidator;

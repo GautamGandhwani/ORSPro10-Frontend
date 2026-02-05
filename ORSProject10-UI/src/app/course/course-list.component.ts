@@ -14,5 +14,4 @@ export class CourseListComponent  extends BaseListCtl {
   constructor(public locator: ServiceLocatorService, public route: ActivatedRoute) {
     super( locator.endpoints.COURSE, locator, route);
   }
-
 }
