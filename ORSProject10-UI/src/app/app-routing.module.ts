@@ -51,6 +51,8 @@ import { ShoppingComponent } from './shopping/shopping.component';
 import { ShoppingListComponent } from './shopping/shopping-list.component';
 import { ReviewComponent } from './review/review.component';
 import { ReviewListComponent } from './review/review-list.component';
+import { ContactComponent } from './contact/contact.component';
+import { ContactListComponent } from './contact/contact-list.component';
 
 
 
@@ -69,6 +71,20 @@ const routes: Routes = [
     {
         path: 'employee',
         component: EmployeeComponent
+    },
+
+      // ***********CONTACT*************
+    {
+        path: 'contact',
+        component: ContactComponent
+    },
+    {
+        path:'contactlist',
+        component:ContactListComponent
+    },
+    {
+        path:'contact/:id',
+        component:ContactComponent
     },
 
       // ***********REVIEW*************

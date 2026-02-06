@@ -81,6 +81,22 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="nav navbar-nav ml-auto" style="padding-right: 5%;">
 
+       <!-- =================================== COUPON =========================================== -->
+
+      <li class="nav-item dropdown" style="padding-left: 5px">
+        <a class="nav-link dropdown-toggle" [routerLink]="['/#']" id="navbarDropdown" role="button"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <font style="color: white">{{ "Contact" | translate }}</font>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" [routerLink]="['/contact']"><i class="fa fa-university"></i> &nbsp;
+            {{ "Add Contact" | translate }}</a>
+          <a class="dropdown-item" [routerLink]="['/contactlist']"><i class="fa fa-building"></i> &nbsp;
+            {{ "Contact List" | translate }}
+          </a>
+        </div>
+      </li>
+
       <!-- =================================== REVIEW =========================================== -->
 
       <!-- <li class="nav-item dropdown" style="padding-left: 5px">

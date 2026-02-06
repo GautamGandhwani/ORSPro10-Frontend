@@ -70,6 +70,8 @@ import { ShoppingComponent } from './shopping/shopping.component';
 import { ShoppingListComponent } from './shopping/shopping-list.component';
 import { ReviewComponent } from './review/review.component';
 import { ReviewListComponent } from './review/review-list.component';
+import { ContactComponent } from './contact/contact.component';
+import { ContactListComponent } from './contact/contact-list.component';
 
 
 
@@ -137,6 +139,8 @@ export function myHttpLoader(http: HttpClient) {
     ShoppingListComponent,
     ReviewComponent,
     ReviewListComponent,
+    ContactComponent,
+    ContactListComponent,
     
   ],
   imports: [
