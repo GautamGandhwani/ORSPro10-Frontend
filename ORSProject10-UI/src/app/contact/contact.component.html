@@ -72,10 +72,10 @@
 
 
             <div>
-            <span class="pt-2"><b>{{'Email' | translate }}</b>
-              <span class="required-field"></span></span>
+              <span class="pt-2"><b>{{'Email' | translate }}</b>
+                <span class="required-field">*</span></span>
 
-            <div class="col-sm-12">
+
               <div class="input-group">
                 <div class="input-group-prepend">
                   <div class="input-group-text"><i class="fa fa-envelope grey-text"></i> </div>
@@ -83,31 +83,31 @@
                 <input type="text" name="email" [(ngModel)]="form.data.email" class="form-control"
                   [readonly]="form.data.id > 0" placeholder="{{'Enter Email'  | translate }}">
               </div>
-            </div><span *ngIf="form.inputerror.email != null" class="alertRedColor" style=" color: red;"> {{'email'|
-              translate}} </span>
-          </div>
+              <span *ngIf="form.inputerror.email != null" class="alertRedColor" style=" color: red;"> {{'email'|
+                translate}} </span>
+            </div>
 
             <div>
               <span class="pt-2"><b>{{'Mobile No' | translate }}</b>
-                <span class="required-field"></span></span>
+                <span class="required-field">*</span></span>
 
-              <div class="col-sm-12">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <div class="input-group-text"><i class="fa fa-phone grey-text"></i> </div>
-                  </div>
-                  <input type="text" name="mobileNo" maxlength="10" [(ngModel)]="form.data.mobileNo"
-                    class="form-control" placeholder="{{'Enter Mobile Number' | translate}}">
+
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text"><i class="fa fa-phone grey-text"></i> </div>
                 </div>
-              </div><span *ngIf="form.inputerror.mobileNo != null" class="alertRedColor" style=" color: red;">
+                <input type="text" name="mobileNo" maxlength="10" [(ngModel)]="form.data.mobileNo" class="form-control"
+                  placeholder="{{'Enter Mobile Number' | translate}}">
+              </div>
+              <span *ngIf="form.inputerror.mobileNo != null" class="alertRedColor" style=" color: red;">
                 {{'mobileNo'| translate}} </span>
             </div>
 
-            < <div>
-            <span class="pt-2"><b>{{'Message' | translate }}</b>
-              <span class="required-field"></span></span>
+            <div>
+              <span class="pt-2"><b>{{'Message' | translate }}</b>
+                <span class="required-field">*</span></span>
 
-            <div class="col-sm-12">
+
               <div class="input-group">
                 <div class="input-group-prepend">
                   <div class="input-group-text"><i class="fa fa-user grey-text"></i> </div>
@@ -115,9 +115,9 @@
                 <input type="text" name="message" [(ngModel)]="form.data.message" class="form-control"
                   placeholder="{{'Enter message'  | translate }}">
               </div>
-            </div><span *ngIf="form.inputerror.message != null" class="alertRedColor" style=" color: red;">
-              {{'message'| translate}} </span>
-          </div>
+              <span *ngIf="form.inputerror.message != null" class="alertRedColor" style=" color: red;">
+                {{'message'| translate}} </span>
+            </div>
 
             <div class="row pt-2 pl-2 pb-3">
 

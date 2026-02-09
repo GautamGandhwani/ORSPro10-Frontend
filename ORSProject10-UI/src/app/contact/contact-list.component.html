@@ -59,11 +59,11 @@
           <span *ngIf="errorMessagename" class="alertRedColor">{{ errorMessagename }}</span>
         </div>
 
-        <!-- <div class="col-sm-2">
-          <input type="text" name="location" [(ngModel)]="form.searchParams.location" class="form-control"
-            placeholder="{{ 'Enter location' | translate }}">
-          <span *ngIf="errorMessagelocation" class="alertRedColor">{{ errorMessagelocation }}</span>
-        </div> -->
+        <div class="col-sm-2">
+          <input type="text" name="email" [(ngModel)]="form.searchParams.email" class="form-control"
+            placeholder="{{ 'Enter email' | translate }}">
+          <span *ngIf="errorMessageemail" class="alertRedColor">{{ errorMessageemail }}</span>
+        </div>
 
         <!-- <div class="col-sm-2">
           <input type="date" class="form-control" [(ngModel)]="form.searchParams.expiryDate"
@@ -85,7 +85,7 @@
         </div>
 
         <div>
-          <button (click)="forward('/coupon')" type="button" class="btn btn-success w-100">
+          <button (click)="forward('/contact')" type="button" class="btn btn-success w-100">
             {{ 'Add Contact' | translate }}
           </button>
         </div>
