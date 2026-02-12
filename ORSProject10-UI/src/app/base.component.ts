@@ -125,20 +125,17 @@ export class BaseCtl implements OnInit {
     console.log("search start")
     var _self = this;
 
-    this.serviceLocator.httpService.post(
-      _self.api.search + "/" + _self.form.pageNo,
-      _self.form.searchParams,
+    this.serviceLocator.httpService.post(_self.api.search + "/" + _self.form.pageNo, _self.form.searchParams, function (res, err) {
 
-      function (res, err) {
-
-        // 🔴 ERROR case (DB down / 503 / etc)
+        
+      
         if (err) {
           _self.form.message = err.message;
-          _self.form.error = true;     // ← THIS makes it red
+          _self.form.error = true;    
           return;
         }
 
-        // ✅ SUCCESS case
+        //  SUCCESS case
         if (res.success) {
 
           _self.form.list = res.result.data;
@@ -153,7 +150,6 @@ export class BaseCtl implements OnInit {
           }
 
         } else {
-          // business validation error from backend
           _self.form.message = res.result.message;
           _self.form.error = true;   // also red
         }
@@ -201,10 +197,10 @@ export class BaseCtl implements OnInit {
     this.serviceLocator.httpService.get(_self.api.get + "/" + _self.form.data.id, function (res, err) {
       _self.form.data.id = 0;
 
-      // 🔴 ERROR case (DB down / 503 / etc)
+     
       if (err) {
         _self.form.message = err.message;
-        _self.form.error = true;     // ← THIS makes it red
+        _self.form.error = true;    
         return;
       }
 
@@ -251,7 +247,7 @@ export class BaseCtl implements OnInit {
 
       if (err) {
         _self.form.message = err.message;
-        _self.form.error = true;     // ← THIS makes it red
+        _self.form.error = true;     
         return;
       }
 
@@ -304,7 +300,7 @@ export class BaseCtl implements OnInit {
 
         if (err) {
           _self.form.message = err.message;
-          _self.form.error = true;     // ← THIS makes it red
+          _self.form.error = true;     
           return;
         }
 

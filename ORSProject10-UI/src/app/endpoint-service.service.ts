@@ -30,4 +30,10 @@ export class EndpointServiceService {
   public SHOPPING = this.SERVER_URL + "/Shopping";
   public REVIEW = this.SERVER_URL + "/Review";
   public CONTACT = this.SERVER_URL + "/Contact";
+  public SUBSCRIPTION = this.SERVER_URL + "/Subscription";
+  public SESSION = this.SERVER_URL + "/Session";
+  public PROFILE = this.SERVER_URL + "/Profile";
+  public LOCATION = this.SERVER_URL + "/Location";
+  public BANK = this.SERVER_URL + "/Bank";
+
 }

@@ -53,6 +53,14 @@ import { ReviewComponent } from './review/review.component';
 import { ReviewListComponent } from './review/review-list.component';
 import { ContactComponent } from './contact/contact.component';
 import { ContactListComponent } from './contact/contact-list.component';
+import { SubscriptionComponent } from './subscription/subscription.component';
+import { SubscriptionListComponent } from './subscription/subscription-list.component';
+import { SessionComponent } from './session/session.component';
+import { SessionListComponent } from './session/session-list.component';
+import { ProfileComponent } from './profile/profile.component';
+import { ProfileListComponent } from './profile/profile-list.component';
+import { BankComponent } from './bank/bank.component';
+import { BankListComponent } from './bank/bank-list.component';
 
 
 
@@ -73,60 +81,129 @@ const routes: Routes = [
         component: EmployeeComponent
     },
 
-      // ***********CONTACT*************
+    {
+        path: 'bank',
+        component: BankComponent
+    },
+    {
+        path: 'banklist',
+        component: BankListComponent
+    },
+    {
+        path: 'bank/:id',
+        component: BankComponent
+    },
+
+    // ***********LOCATION*************
+    {
+        path: 'location',
+        component: ProfileComponent
+    },
+    {
+        path: 'locationlist',
+        component: ProfileListComponent
+    },
+    {
+        path: 'locatione/:id',
+        component: ProfileComponent
+    },
+
+    // ***********PROFILE*************
+    {
+        path: 'profile',
+        component: ProfileComponent
+    },
+    {
+        path: 'profilelist',
+        component: ProfileListComponent
+    },
+    {
+        path: 'profile/:id',
+        component: ProfileComponent
+    },
+
+    // ***********SESSION*************
+    {
+        path: 'session',
+        component: SessionComponent
+    },
+    {
+        path: 'sessionlist',
+        component: SessionListComponent
+    },
+    {
+        path: 'session/:id',
+        component: SessionComponent
+    },
+
+    // ***********SUBSCRIPTION*************
+    {
+        path: 'subscription',
+        component: SubscriptionComponent
+    },
+    {
+        path: 'subscriptionlist',
+        component: SubscriptionListComponent
+    },
+    {
+        path: 'subscription/:id',
+        component: SubscriptionComponent
+    },
+
+    // ***********CONTACT*************
     {
         path: 'contact',
         component: ContactComponent
     },
     {
-        path:'contactlist',
-        component:ContactListComponent
+        path: 'contactlist',
+        component: ContactListComponent
     },
     {
-        path:'contact/:id',
-        component:ContactComponent
+        path: 'contact/:id',
+        component: ContactComponent
     },
 
-      // ***********REVIEW*************
+    // ***********REVIEW*************
     {
         path: 'review',
         component: ReviewComponent
     },
     {
-        path:'reviewlist',
-        component:ReviewListComponent
+        path: 'reviewlist',
+        component: ReviewListComponent
     },
     {
-        path:'review/:id',
-        component:ReviewComponent
+        path: 'review/:id',
+        component: ReviewComponent
     },
 
-      // ***********SHOPPING*************
+    // ***********SHOPPING*************
     {
         path: 'shopping',
         component: ShoppingComponent
     },
     {
-        path:'shoppinglist',
-        component:ShoppingListComponent
+        path: 'shoppinglist',
+        component: ShoppingListComponent
     },
     {
-        path:'shopping/:id',
-        component:ShoppingComponent
+        path: 'shopping/:id',
+        component: ShoppingComponent
     },
 
-     // ***********INQUIRY*************
+    // ***********INQUIRY*************
     {
         path: 'inquiry',
         component: InquiryComponent
     },
     {
-        path:'inquirylist',
-        component:InquiryListComponent
+        path: 'inquirylist',
+        component: InquiryListComponent
     },
     {
-        path:'inquiry/:id',
-        component:InquiryComponent
+        path: 'inquiry/:id',
+        component: InquiryComponent
     },
 
     // ***********COUPON*************
@@ -135,12 +212,12 @@ const routes: Routes = [
         component: CouponComponent
     },
     {
-        path:'couponlist',
-        component:CouponListComponent
+        path: 'couponlist',
+        component: CouponListComponent
     },
     {
-        path:'coupon/:id',
-        component:CouponComponent
+        path: 'coupon/:id',
+        component: CouponComponent
     },
 
     // ***********SETTING*************
@@ -149,12 +226,12 @@ const routes: Routes = [
         component: SettingComponent
     },
     {
-        path:'settinglist',
-        component:SettingListComponent
+        path: 'settinglist',
+        component: SettingListComponent
     },
     {
-        path:'setting/:id',
-        component:SettingComponent
+        path: 'setting/:id',
+        component: SettingComponent
     },
 
     //************Compensation************

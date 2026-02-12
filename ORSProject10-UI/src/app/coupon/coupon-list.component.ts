@@ -11,18 +11,6 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CouponListComponent extends BaseListCtl implements OnInit {
 
-  public form = {
-    error: false,
-    message: null,
-    preload: [],
-    data: { id: null },
-    inputerror: {},
-    searchParams: {},
-    searchMessage: null,
-    list: [],
-    pageNo: 0
-  };
-
   constructor(public locator: ServiceLocatorService, public route: ActivatedRoute, private httpClient: HttpClient) {
     super(locator.endpoints.COUPON, locator, route);
   }

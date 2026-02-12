@@ -72,6 +72,17 @@ import { ReviewComponent } from './review/review.component';
 import { ReviewListComponent } from './review/review-list.component';
 import { ContactComponent } from './contact/contact.component';
 import { ContactListComponent } from './contact/contact-list.component';
+import { SubscriptionComponent } from './subscription/subscription.component';
+import { SubscriptionListComponent } from './subscription/subscription-list.component';
+import { SessionComponent } from './session/session.component';
+import { SessionListComponent } from './session/session-list.component';
+import { ProfileComponent } from './profile/profile.component';
+import { ProfileListComponent } from './profile/profile-list.component';
+import { LocationComponent } from './location/location.component';
+import { LocationListComponent } from './location/location-list.component';
+import { BankComponent } from './bank/bank.component';
+import { BankListComponent } from './bank/bank-list.component';
+
 
 
 
@@ -141,6 +152,16 @@ export function myHttpLoader(http: HttpClient) {
     ReviewListComponent,
     ContactComponent,
     ContactListComponent,
+    SubscriptionComponent,
+    SubscriptionListComponent,
+    SessionComponent,
+    SessionListComponent,
+    ProfileComponent,
+    ProfileListComponent,
+    LocationComponent,
+    LocationListComponent,
+    BankComponent,
+    BankListComponent,
     
   ],
   imports: [
