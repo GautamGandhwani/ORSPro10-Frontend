@@ -82,6 +82,8 @@ import { LocationComponent } from './location/location.component';
 import { LocationListComponent } from './location/location-list.component';
 import { BankComponent } from './bank/bank.component';
 import { BankListComponent } from './bank/bank-list.component';
+import { DeviceComponent } from './device/device.component';
+import { DeviceListComponent } from './device/device-list.component';
 
 
 
@@ -162,6 +164,8 @@ export function myHttpLoader(http: HttpClient) {
     LocationListComponent,
     BankComponent,
     BankListComponent,
+    DeviceComponent,
+    DeviceListComponent,
     
   ],
   imports: [

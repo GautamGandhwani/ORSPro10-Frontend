@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { CookieService } from 'ngx-cookie-service';
 import { Router } from '@angular/router'
 
 
@@ -8,7 +7,7 @@ import { Router } from '@angular/router'
 
 export class HttpServiceService {
 
-
+  msg = '';
   token = '';
   form = {
     message: '',
@@ -50,7 +49,7 @@ export class HttpServiceService {
       this.form.error = true;
       this.userparams.url = this.router.url;// to navigate the URI request.
       this.router.navigateByUrl("/login");
-      console.log("Amit Bansal");
+      console.log("Sushobhit pandey");
 
       return true;
     } else {
@@ -72,15 +71,15 @@ export class HttpServiceService {
   }, error => {
     console.log('ORS Error--', error);
 
-    let msg = 'Service unavailable';
+    
 
     if (error && error.error && error.error.message && error.error.message.length > 0) {
-      msg = error.error.message[0];
+        this.msg = error.error.message[0];
     }
 
     const customError = {
       status: error.status,
-      message: msg
+      message: this.msg
     };
 
     callback(null, customError);
@@ -88,28 +87,33 @@ export class HttpServiceService {
 }
 
 
-  post(endpoint, bean, callback,errorCallback?) {
-    if (this.isLogout()) {
-      console.log('inside isLogout return true')
-      return true;
-    }
-    return this.httpClient.post(endpoint, bean).subscribe((data) => {
+  post(endpoint, bean, callback, errorCallback?) {
+
+  if (this.isLogout()) {
+    console.log('inside isLogout return true');
+    return;
+  }
+
+  return this.httpClient.post(endpoint, bean).subscribe(
+
+    (data) => {
       console.log(data);
       callback(data);
+    },
 
-    }, (error) => {
+    (error) => {
       console.log('ORS Error--', error);
+
       
-      let msg = 'Service is currently unavailable';
 
       if (error && error.error && error.error.result && error.error.result.message) {
-        msg = error.error.result.message;
+       this. msg = error.error.result.message;
       }
 
       const errorRes = {
         success: false,
         result: {
-          message: msg
+          message: this. msg
         }
       };
 
@@ -118,6 +122,10 @@ export class HttpServiceService {
       if (errorCallback) {
         errorCallback(error);
       }
-    });
-  }
+    }
+
+  );
+}
+
+
 }

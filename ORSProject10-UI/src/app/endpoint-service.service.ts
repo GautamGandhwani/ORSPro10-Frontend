@@ -35,5 +35,5 @@ export class EndpointServiceService {
   public PROFILE = this.SERVER_URL + "/Profile";
   public LOCATION = this.SERVER_URL + "/Location";
   public BANK = this.SERVER_URL + "/Bank";
-
+   public DEVICE = this.SERVER_URL + "/Device";
 }

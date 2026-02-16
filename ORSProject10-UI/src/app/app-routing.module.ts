@@ -61,6 +61,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { ProfileListComponent } from './profile/profile-list.component';
 import { BankComponent } from './bank/bank.component';
 import { BankListComponent } from './bank/bank-list.component';
+import { DeviceComponent } from './device/device.component';
+import { DeviceListComponent } from './device/device-list.component';
 
 
 
@@ -80,6 +82,23 @@ const routes: Routes = [
         path: 'employee',
         component: EmployeeComponent
     },
+
+    // ***********DEVICE*************
+
+    {
+        path: 'device',
+        component: DeviceComponent
+    },
+    {
+        path: 'devicelist',
+        component: DeviceListComponent
+    },
+    {
+        path: 'device/:id',
+        component: DeviceComponent
+    },
+
+    // ***********BANK*************
 
     {
         path: 'bank',
