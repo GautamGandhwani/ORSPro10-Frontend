@@ -24,7 +24,5 @@ export class AuthService implements HttpInterceptor {
     }
     console.log(req.headers.get("Authorization") + "------------------->>>")
     return next.handle(req);
-
   }
-
 }

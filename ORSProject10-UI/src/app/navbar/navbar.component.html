@@ -81,10 +81,60 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="nav navbar-nav ml-auto" style="padding-right: 5%;">
 
+      <!-- =================================== SUPPLIER =========================================== -->
+
+      <li class="nav-item dropdown" style="padding-left: 5px">
+        <a class="nav-link dropdown-toggle" [routerLink]="['/#']" id="navbarDropdown" role="button"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <font style="color: white">{{ "Supplier" | translate }}</font>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" [routerLink]="['/supplier']"><i class="fa fa-calculator"></i> &nbsp;
+            {{ "Add Supplier" | translate }}</a>
+          <a class="dropdown-item" [routerLink]="['/supplierlist']">
+            <i class="fa fa-list"></i> &nbsp;
+            {{ "Supplier List" | translate }}
+          </a>
+        </div>
+      </li>
+
+      <!-- =================================== JOB =========================================== -->
+
+      <!-- <li class="nav-item dropdown" style="padding-left: 5px">
+        <a class="nav-link dropdown-toggle" [routerLink]="['/#']" id="navbarDropdown" role="button"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <font style="color: white">{{ "Job" | translate }}</font>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" [routerLink]="['/job']"><i class="fa fa-calculator"></i> &nbsp;
+            {{ "Add Job" | translate }}</a>
+          <a class="dropdown-item" [routerLink]="['/joblist']">
+            <i class="fa fa-list"></i> &nbsp;
+            {{ "job List" | translate }}
+          </a>
+        </div>
+      </li> -->
+
+      <!-- =================================== PRIORITY =========================================== -->
+
+      <!-- <li class="nav-item dropdown" style="padding-left: 5px">
+        <a class="nav-link dropdown-toggle" [routerLink]="['/#']" id="navbarDropdown" role="button"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <font style="color: white">{{ "Priority" | translate }}</font>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" [routerLink]="['/priority']"><i class="fa fa-calculator"></i> &nbsp;
+            {{ "Add Priority" | translate }}</a>
+          <a class="dropdown-item" [routerLink]="['/prioritylist']">
+            <i class="fa fa-list"></i> &nbsp;
+            {{ "Priority List" | translate }}
+          </a>
+        </div>
+      </li> -->
 
       <!-- =================================== DEVICE =========================================== -->
 
-      <li class="nav-item dropdown" style="padding-left: 5px">
+      <!-- <li class="nav-item dropdown" style="padding-left: 5px">
         <a class="nav-link dropdown-toggle" [routerLink]="['/#']" id="navbarDropdown" role="button"
           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <font style="color: white">{{ "Device" | translate }}</font>
@@ -97,7 +147,7 @@
             {{ "Device List" | translate }}
           </a>
         </div>
-      </li>
+      </li> -->
 
       <!-- =================================== BANK =========================================== -->
 

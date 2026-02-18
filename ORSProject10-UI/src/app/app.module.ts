@@ -84,6 +84,12 @@ import { BankComponent } from './bank/bank.component';
 import { BankListComponent } from './bank/bank-list.component';
 import { DeviceComponent } from './device/device.component';
 import { DeviceListComponent } from './device/device-list.component';
+import { PriopityComponent } from './priopity/priopity.component';
+import { PriorityListComponent } from './priopity/priority-list.component';
+import { JobComponent } from './job/job.component';
+import { JobListComponent } from './job/job-list.component';
+import { SupplierComponent } from './supplier/supplier.component';
+import { SupplierListComponent } from './supplier/supplier-list.component';
 
 
 
@@ -166,6 +172,12 @@ export function myHttpLoader(http: HttpClient) {
     BankListComponent,
     DeviceComponent,
     DeviceListComponent,
+    PriopityComponent,
+    PriorityListComponent,
+    JobComponent,
+    JobListComponent,
+    SupplierComponent,
+    SupplierListComponent,
     
   ],
   imports: [
