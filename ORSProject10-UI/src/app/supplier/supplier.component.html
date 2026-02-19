@@ -63,7 +63,8 @@
                   <div class="input-group-text"><i class="fa fa-user grey-text"></i></div>
                 </div>
 
-                <input type="text" name="name" [(ngModel)]="form.data.name" class="form-control"
+                <input type="text" name="name" [(ngModel)]="form.data.name" class="form-control" #name="ngModel"
+                  maxlength="20" pattern="^[A-Za-z ]+$" (keydown)="filterInputS($event, 'errorMessageName', 20, 'char')"
                   placeholder="{{ 'Enter name' | translate }}">
               </div>
 
@@ -107,7 +108,7 @@
                 translate}} </span>
             </div>
 
-             <div class="form-group pt-2">
+            <div class="form-group pt-2">
               <label>
                 <b>{{ 'Paymant Term' | translate }}</b>
                 <span class="required-field">*</span>

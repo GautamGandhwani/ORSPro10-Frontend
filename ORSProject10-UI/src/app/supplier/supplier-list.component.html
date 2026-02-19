@@ -21,6 +21,16 @@ background-size: cover;width:auto;
             placeholder="{{'Search name'| translate}}">
         </div>
 
+         <div class="col-sm-2">
+          <select class="form-control" name="category" [(ngModel)]="form.searchParams.category"
+            aria-label="ngSelected" required>
+             <option [ngValue]="undefined">{{ 'Select Category' | translate }}</option>
+                  <option value="Basic">{{ 'Basic' | translate }}</option>
+                  <option value="Standard">{{ 'Standard' | translate }}</option>
+                  <option value="Premium">{{ 'Premium' | translate }}</option>
+          </select>
+        </div>
+
         <div class="col-sm-1 ml-3">
           <button (click)="submit()" class="btn btn-primary">
             {{'Search'| translate}}</button>
