@@ -86,6 +86,23 @@
       <li class="nav-item dropdown" style="padding-left: 5px">
         <a class="nav-link dropdown-toggle" [routerLink]="['/#']" id="navbarDropdown" role="button"
           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <font style="color: white">{{ "Promotion" | translate }}</font>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" [routerLink]="['/promotion']"><i class="fa fa-calculator"></i> &nbsp;
+            {{ "Add Promotion" | translate }}</a>
+          <a class="dropdown-item" [routerLink]="['/promotionlist']">
+            <i class="fa fa-list"></i> &nbsp;
+            {{ "Promotion List" | translate }}
+          </a>
+        </div>
+      </li>
+
+      <!-- =================================== SUPPLIER =========================================== -->
+
+      <!-- <li class="nav-item dropdown" style="padding-left: 5px">
+        <a class="nav-link dropdown-toggle" [routerLink]="['/#']" id="navbarDropdown" role="button"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <font style="color: white">{{ "Supplier" | translate }}</font>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -96,7 +113,7 @@
             {{ "Supplier List" | translate }}
           </a>
         </div>
-      </li>
+      </li> -->
 
       <!-- =================================== JOB =========================================== -->
 

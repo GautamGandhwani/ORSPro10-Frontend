@@ -69,6 +69,8 @@ import { JobComponent } from './job/job.component';
 import { JobListComponent } from './job/job-list.component';
 import { SupplierComponent } from './supplier/supplier.component';
 import { SupplierListComponent } from './supplier/supplier-list.component';
+import { PromotionComponent } from './promotion/promotion.component';
+import { PromotionListComponent } from './promotion/promotion-list.component';
 
 
 
@@ -87,6 +89,21 @@ const routes: Routes = [
     {
         path: 'employee',
         component: EmployeeComponent
+    },
+
+    // ***********PROMOTION*************
+
+    {
+        path: 'promotion',
+        component: PromotionComponent
+    },
+    {
+        path: 'promotionlist',
+        component: PromotionListComponent
+    },
+    {
+        path: 'promotion/:id',
+        component: SupplierComponent
     },
 
     // ***********SUPPLIER*************

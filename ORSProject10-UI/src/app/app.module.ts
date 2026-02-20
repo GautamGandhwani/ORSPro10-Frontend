@@ -90,6 +90,8 @@ import { JobComponent } from './job/job.component';
 import { JobListComponent } from './job/job-list.component';
 import { SupplierComponent } from './supplier/supplier.component';
 import { SupplierListComponent } from './supplier/supplier-list.component';
+import { PromotionComponent } from './promotion/promotion.component';
+import { PromotionListComponent } from './promotion/promotion-list.component';
 
 
 
@@ -178,6 +180,8 @@ export function myHttpLoader(http: HttpClient) {
     JobListComponent,
     SupplierComponent,
     SupplierListComponent,
+    PromotionComponent,
+    PromotionListComponent,
     
   ],
   imports: [
