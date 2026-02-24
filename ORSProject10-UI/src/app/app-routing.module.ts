@@ -71,6 +71,10 @@ import { SupplierComponent } from './supplier/supplier.component';
 import { SupplierListComponent } from './supplier/supplier-list.component';
 import { PromotionComponent } from './promotion/promotion.component';
 import { PromotionListComponent } from './promotion/promotion-list.component';
+import { AssetComponent } from './asset/asset.component';
+import { AssetListComponent } from './asset/asset-list.component';
+import { PlacementComponent } from './placement/placement.component';
+import { PlacementListComponent } from './placement/placement-list.component';
 
 
 
@@ -91,6 +95,36 @@ const routes: Routes = [
         component: EmployeeComponent
     },
 
+      // ***********ASSET*************
+
+    {
+        path: 'placement',
+        component: PlacementComponent
+    },
+    {
+        path: 'placementlist',
+        component: PlacementListComponent
+    },
+    {
+        path: 'placement/:id',
+        component: PlacementComponent
+    },
+
+    // ***********ASSET*************
+
+    {
+        path: 'asset',
+        component: AssetComponent
+    },
+    {
+        path: 'assetlist',
+        component: AssetListComponent
+    },
+    {
+        path: 'asset/:id',
+        component: AssetComponent
+    },
+
     // ***********PROMOTION*************
 
     {
@@ -103,7 +137,7 @@ const routes: Routes = [
     },
     {
         path: 'promotion/:id',
-        component: SupplierComponent
+        component: PromotionComponent
     },
 
     // ***********SUPPLIER*************

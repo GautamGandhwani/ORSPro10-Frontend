@@ -39,6 +39,8 @@ export class EndpointServiceService {
   public PRIORITY = this.SERVER_URL + "/Priority";
   public JOB = this.SERVER_URL + "/Job";
   public SUPPLIER = this.SERVER_URL + "/Supplier";
-   public PROMOTION = this.SERVER_URL + "/Promotion";
+  public PROMOTION = this.SERVER_URL + "/Promotion";
+  public ASSET = this.SERVER_URL + "/Asset";
+  public PLACEMENT = this.SERVER_URL + "/Placement";
 }
 

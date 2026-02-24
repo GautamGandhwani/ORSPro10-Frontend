@@ -92,6 +92,10 @@ import { SupplierComponent } from './supplier/supplier.component';
 import { SupplierListComponent } from './supplier/supplier-list.component';
 import { PromotionComponent } from './promotion/promotion.component';
 import { PromotionListComponent } from './promotion/promotion-list.component';
+import { AssetComponent } from './asset/asset.component';
+import { AssetListComponent } from './asset/asset-list.component';
+import { PlacementComponent } from './placement/placement.component';
+import { PlacementListComponent } from './placement/placement-list.component';
 
 
 
@@ -182,6 +186,10 @@ export function myHttpLoader(http: HttpClient) {
     SupplierListComponent,
     PromotionComponent,
     PromotionListComponent,
+    AssetComponent,
+    AssetListComponent,
+    PlacementComponent,
+    PlacementListComponent,
     
   ],
   imports: [

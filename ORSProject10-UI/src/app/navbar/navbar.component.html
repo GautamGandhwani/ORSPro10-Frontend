@@ -81,9 +81,44 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="nav navbar-nav ml-auto" style="padding-right: 5%;">
 
+      <!-- =================================== PLACEMENT =========================================== -->
+
+      <li class="nav-item dropdown" style="padding-left: 5px">
+        <a class="nav-link dropdown-toggle" [routerLink]="['/#']" id="navbarDropdown" role="button"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <font style="color: white">{{ "Placement" | translate }}</font>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" [routerLink]="['/placement']"><i class="fa fa-calculator"></i> &nbsp;
+            {{ "Add Placement" | translate }}</a>
+          <a class="dropdown-item" [routerLink]="['/placementlist']">
+            <i class="fa fa-list"></i> &nbsp;
+            {{ "Placement List" | translate }}
+          </a>
+        </div>
+      </li>
+
       <!-- =================================== SUPPLIER =========================================== -->
 
       <li class="nav-item dropdown" style="padding-left: 5px">
+        <a class="nav-link dropdown-toggle" [routerLink]="['/#']" id="navbarDropdown" role="button"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <font style="color: white">{{ "Asset" | translate }}</font>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" [routerLink]="['/asset']"><i class="fa fa-calculator"></i> &nbsp;
+            {{ "Add Asset" | translate }}</a>
+          <a class="dropdown-item" [routerLink]="['/assetlist']">
+            <i class="fa fa-list"></i> &nbsp;
+            {{ "Asset List" | translate }}
+          </a>
+        </div>
+      </li>
+
+
+      <!-- =================================== SUPPLIER =========================================== -->
+
+      <!-- <li class="nav-item dropdown" style="padding-left: 5px">
         <a class="nav-link dropdown-toggle" [routerLink]="['/#']" id="navbarDropdown" role="button"
           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <font style="color: white">{{ "Promotion" | translate }}</font>
@@ -96,7 +131,7 @@
             {{ "Promotion List" | translate }}
           </a>
         </div>
-      </li>
+      </li> -->
 
       <!-- =================================== SUPPLIER =========================================== -->
 
