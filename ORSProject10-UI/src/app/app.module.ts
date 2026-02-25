@@ -96,6 +96,8 @@ import { AssetComponent } from './asset/asset.component';
 import { AssetListComponent } from './asset/asset-list.component';
 import { PlacementComponent } from './placement/placement.component';
 import { PlacementListComponent } from './placement/placement-list.component';
+import { ComplaintComponent } from './complaint/complaint.component';
+import { ComplaintListComponent } from './complaint/complaint-list.component';
 
 
 
@@ -190,6 +192,8 @@ export function myHttpLoader(http: HttpClient) {
     AssetListComponent,
     PlacementComponent,
     PlacementListComponent,
+    ComplaintComponent,
+    ComplaintListComponent,
     
   ],
   imports: [

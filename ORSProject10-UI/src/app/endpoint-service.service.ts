@@ -42,5 +42,5 @@ export class EndpointServiceService {
   public PROMOTION = this.SERVER_URL + "/Promotion";
   public ASSET = this.SERVER_URL + "/Asset";
   public PLACEMENT = this.SERVER_URL + "/Placement";
+  public COMPLAINT = this.SERVER_URL + "/Complaint";
 }
-

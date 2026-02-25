@@ -86,6 +86,23 @@
       <li class="nav-item dropdown" style="padding-left: 5px">
         <a class="nav-link dropdown-toggle" [routerLink]="['/#']" id="navbarDropdown" role="button"
           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <font style="color: white">{{ "Complaint" | translate }}</font>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" [routerLink]="['/complaint']"><i class="fa fa-calculator"></i> &nbsp;
+            {{ "Add Complaint" | translate }}</a>
+          <a class="dropdown-item" [routerLink]="['/complaintlist']">
+            <i class="fa fa-list"></i> &nbsp;
+            {{ "Complaint List" | translate }}
+          </a>
+        </div>
+      </li>
+
+      <!-- =================================== PLACEMENT =========================================== -->
+      <!-- 
+      <li class="nav-item dropdown" style="padding-left: 5px">
+        <a class="nav-link dropdown-toggle" [routerLink]="['/#']" id="navbarDropdown" role="button"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <font style="color: white">{{ "Placement" | translate }}</font>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -96,11 +113,11 @@
             {{ "Placement List" | translate }}
           </a>
         </div>
-      </li>
+      </li> -->
 
-      <!-- =================================== SUPPLIER =========================================== -->
+      <!-- =================================== ASSET =========================================== -->
 
-      <li class="nav-item dropdown" style="padding-left: 5px">
+      <!-- <li class="nav-item dropdown" style="padding-left: 5px">
         <a class="nav-link dropdown-toggle" [routerLink]="['/#']" id="navbarDropdown" role="button"
           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <font style="color: white">{{ "Asset" | translate }}</font>
@@ -113,8 +130,7 @@
             {{ "Asset List" | translate }}
           </a>
         </div>
-      </li>
-
+      </li> -->
 
       <!-- =================================== SUPPLIER =========================================== -->
 

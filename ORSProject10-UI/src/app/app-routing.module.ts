@@ -75,6 +75,8 @@ import { AssetComponent } from './asset/asset.component';
 import { AssetListComponent } from './asset/asset-list.component';
 import { PlacementComponent } from './placement/placement.component';
 import { PlacementListComponent } from './placement/placement-list.component';
+import { ComplaintComponent } from './complaint/complaint.component';
+import { ComplaintListComponent } from './complaint/complaint-list.component';
 
 
 
@@ -95,7 +97,23 @@ const routes: Routes = [
         component: EmployeeComponent
     },
 
-      // ***********ASSET*************
+    // ***********COMPLAIN*************
+
+    {
+        path: 'complaint',
+        component: ComplaintComponent
+    },
+    {
+        path: 'complaintlist',
+        component: ComplaintListComponent
+    },
+    {
+        path: 'complaint/:id',
+        component: ComplaintComponent
+    },
+
+
+    // ***********PLACEMENT*************
 
     {
         path: 'placement',
