@@ -11,19 +11,19 @@ background-size: cover;width:auto;
       <div class="panel-heading" style="height: 50px;">
         <!-- <div class="col-sm-6 p-1 text-center"> -->
         <div class="text-center">
-          <h1 class="text-white font-weight-bold">{{'Job List' | translate}}</h1>
+          <h1 class="text-white font-weight-bold">{{'Insurance List' | translate}}</h1>
         </div>
       </div>
 
       <div class="row  pt-4 pb-4 " style="margin-left:15%">
         <div class="col-sm-2">
-          <input type="text" class="form-control" [(ngModel)]="form.searchParams.title"
-            placeholder="{{'Search Title'| translate}}">
+          <input type="text" class="form-control" [(ngModel)]="form.searchParams.policyNumber"
+            placeholder="{{'Search Policy Number'| translate}}">
         </div>
 
         <div class="col-sm-2">
-          <input type="date" class="form-control" [(ngModel)]="form.searchParams.dob"
-            placeholder="{{'Search dob' | translate}}">
+          <input type="date" class="form-control" [(ngModel)]="form.searchParams.expiryDate"
+            placeholder="{{'Search Expiry Date' | translate}}">
 
         </div>
 
@@ -31,13 +31,13 @@ background-size: cover;width:auto;
           <button (click)="submit()" class="btn btn-primary">
             {{'Search'| translate}}</button>
         </div>
-
-        <div class="col-sm-2 ml-3">
-          <button (click)="forward('/job')" type="button" class="btn btn-success">{{'Add Job'|
+        &nbsp;&nbsp;&nbsp;
+        <div class="col-lg-2 ml-4">
+          <button (click)="forward('/insurance')" type="button" class="btn btn-success">{{'Add Insurance'|
             translate}}
           </button>
         </div>
-        <div class="col-sm-1 ml-3">
+        <div class="col-sm-1">
           <button (click)="deleteMany()" class="btn btn-danger">
             {{'Delete'| translate}}</button>
         </div>
@@ -56,19 +56,18 @@ background-size: cover;width:auto;
         <div class="table-responsive">
           <table class="table table-bordered table-striped table-hover font-weight-bold text-white">
             <thead class="thead-light text-uppercase">
-              <tr align="center">
+              <tr>
                 <th><input type="checkbox" [(ngModel)]="isMasterSel" name="list_name" value="h1"
                     (change)="checkUncheckAll($event)" /></th>
                 <th>{{'S.No'| translate}}</th>
-                <th>{{'Title'| translate}}</th>
-                <th>{{'DOB'| translate}}</th>
-                <th>{{'Experience'| translate}}</th>
-                <th>{{'Status'| translate}}</th>
+                <th>{{'Policy Number'| translate}}</th>
+                <th>{{'Premium Amount'| translate}}</th>
+                <th>{{'Expiry Date'| translate}}</th>
                 <th>{{'Edit' | translate}}</th>
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let m of form.list; let i = index" align="center">
+              <tr *ngFor="let m of form.list; let i = index">
                 <!-- <td> <input type="checkbox" name="list_name" value="{{isMasterSel}}" [(ngModel)]="isMasterSel" (change)="isAllSelected()"/>
                   </td> -->
                 <td> <input type="checkbox" #checkboxes (change)="checklistUpdate()" name="list_name" id="{{m.id}}"
@@ -76,12 +75,11 @@ background-size: cover;width:auto;
                 </td>
                 <td> {{(form.pageNo*5)+i+ 1}} </td>
 
-                <td> {{ m.title}} </td>
-                <td> {{ m.dob}} </td>
-                <td> {{ m.experience}} </td>
-                <td> {{ m.status }} </td>
+                <td> {{ m.policyNumber}} </td>
+                <td> {{ m.premiumAmount}} </td>
+                <td> {{ m.expiryDate}} </td>
                 <td>
-                  <a (click)="forward( '/job/' +  m.id)" style="cursor: pointer;">
+                  <a (click)="forward( '/insurance/' +  m.id)" style="cursor: pointer;">
                     <i class="fa fa-edit text-info"></i>
                   </a>
 
@@ -101,14 +99,13 @@ background-size: cover;width:auto;
                 }} </button>
             </td>
             <div>
-              <a class="btn btn-warning mr-1" [routerLink]="['/joblist']" (click)="exit()">
+              <a class="btn btn-warning mr-1" [routerLink]="['/insurancelist']" (click)="exit()">
                 {{ 'Reset' | translate }}
               </a>
             </div>
             <td *ngIf="form.list.length!=0" style="width: 50%;"></td>
             <td *ngIf="form.list.length==0" style="width: 50%;"><a class="btn btn-warning mr-1"
-                [routerLink]="['/joblist']" (click)="exit()">{{'Back' | translate}}</a></td>
-
+                [routerLink]="['/insurancelist']" (click)="exit()">{{'Back' | translate}}</a></td>
             <td><button (click)="next()" [disabled]="nextList==0" type="button" class="btn btn-info"> {{'Next' |
                 translate }}</button></td>
           </tr>

@@ -65,8 +65,6 @@ import { DeviceComponent } from './device/device.component';
 import { DeviceListComponent } from './device/device-list.component';
 import { PriopityComponent } from './priopity/priopity.component';
 import { PriorityListComponent } from './priopity/priority-list.component';
-import { JobComponent } from './job/job.component';
-import { JobListComponent } from './job/job-list.component';
 import { SupplierComponent } from './supplier/supplier.component';
 import { SupplierListComponent } from './supplier/supplier-list.component';
 import { PromotionComponent } from './promotion/promotion.component';
@@ -77,6 +75,10 @@ import { PlacementComponent } from './placement/placement.component';
 import { PlacementListComponent } from './placement/placement-list.component';
 import { ComplaintComponent } from './complaint/complaint.component';
 import { ComplaintListComponent } from './complaint/complaint-list.component';
+import { InsuranceComponent } from './insurance/insurance.component';
+import { InsuranceListComponent } from './insurance/insurance-list.component';
+import { JobComponent } from './job/job.component';
+import { JobListComponent } from './job/job-list.component';
 
 
 
@@ -95,6 +97,36 @@ const routes: Routes = [
     {
         path: 'employee',
         component: EmployeeComponent
+    },
+
+     // ***********JOB*************
+
+    {
+        path: 'job',
+        component: JobComponent
+    },
+    {
+        path: 'joblist',
+        component: JobListComponent
+    },
+    {
+        path: 'job/:id',
+        component: JobComponent
+    },
+
+     // ***********INSURANCE*************
+
+    {
+        path: 'insurance',
+        component: InsuranceComponent
+    },
+    {
+        path: 'insurancelist',
+        component: InsuranceListComponent
+    },
+    {
+        path: 'insurance/:id',
+        component: InsuranceComponent
     },
 
     // ***********COMPLAIN*************
@@ -171,21 +203,6 @@ const routes: Routes = [
     {
         path: 'supplier/:id',
         component: SupplierComponent
-    },
-
-    // ***********JOB*************
-
-    {
-        path: 'job',
-        component: JobComponent
-    },
-    {
-        path: 'joblist',
-        component: JobListComponent
-    },
-    {
-        path: 'job/:id',
-        component: JobComponent
     },
 
     // ***********PRIORITY*************

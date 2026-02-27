@@ -37,10 +37,11 @@ export class EndpointServiceService {
   public BANK = this.SERVER_URL + "/Bank";
   public DEVICE = this.SERVER_URL + "/Device";
   public PRIORITY = this.SERVER_URL + "/Priority";
-  public JOB = this.SERVER_URL + "/Job";
   public SUPPLIER = this.SERVER_URL + "/Supplier";
   public PROMOTION = this.SERVER_URL + "/Promotion";
   public ASSET = this.SERVER_URL + "/Asset";
   public PLACEMENT = this.SERVER_URL + "/Placement";
   public COMPLAINT = this.SERVER_URL + "/Complaint";
+  public INSURANCE = this.SERVER_URL + "/Insurance";
+  public JOB = this.SERVER_URL + "/Job";
 }
