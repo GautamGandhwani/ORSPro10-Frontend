@@ -75,10 +75,17 @@ import { PlacementComponent } from './placement/placement.component';
 import { PlacementListComponent } from './placement/placement-list.component';
 import { ComplaintComponent } from './complaint/complaint.component';
 import { ComplaintListComponent } from './complaint/complaint-list.component';
-import { InsuranceComponent } from './insurance/insurance.component';
-import { InsuranceListComponent } from './insurance/insurance-list.component';
 import { JobComponent } from './job/job.component';
 import { JobListComponent } from './job/job-list.component';
+import { InsuranceComponent } from './insurance/insurance.component';
+import { InsuranceListComponent } from './insurance/insurance-list.component';
+import { PhotographyComponent } from './photography/photography.component';
+import { PhotographyListComponent } from './photography/photography-list.component';
+import { DepartmentComponent } from './department/department.component';
+import { DepartmentListComponent } from './department/department-list.component';
+import { DeliveryComponent } from './delivery/delivery.component';
+import { DeliveryListComponent } from './delivery/delivery-list.component';
+
 
 
 
@@ -99,22 +106,52 @@ const routes: Routes = [
         component: EmployeeComponent
     },
 
-     // ***********JOB*************
+    // ***********DELIVERY*************
 
     {
-        path: 'job',
-        component: JobComponent
+        path: 'delivery',
+        component: DeliveryComponent
     },
     {
-        path: 'joblist',
-        component: JobListComponent
+        path: 'deliverylist',
+        component: DeliveryListComponent
     },
     {
-        path: 'job/:id',
-        component: JobComponent
+        path: 'delivery/:id',
+        component: DeliveryComponent
     },
 
-     // ***********INSURANCE*************
+    // ***********department*************
+
+    {
+        path: 'department',
+        component: DepartmentComponent
+    },
+    {
+        path: 'departmentlist',
+        component: DepartmentListComponent
+    },
+    {
+        path: 'department/:id',
+        component: DepartmentComponent
+    },
+
+    // ***********PHOTOGRAPHY*************
+
+    {
+        path: 'photography',
+        component: PhotographyComponent
+    },
+    {
+        path: 'photographylist',
+        component: PhotographyListComponent
+    },
+    {
+        path: 'photography/:id',
+        component: PhotographyComponent
+    },
+
+    // ***********INSURANCE*************
 
     {
         path: 'insurance',
@@ -127,6 +164,21 @@ const routes: Routes = [
     {
         path: 'insurance/:id',
         component: InsuranceComponent
+    },
+
+    // ***********JOB*************
+
+    {
+        path: 'job',
+        component: JobComponent
+    },
+    {
+        path: 'joblist',
+        component: JobListComponent
+    },
+    {
+        path: 'job/:id',
+        component: JobComponent
     },
 
     // ***********COMPLAIN*************

@@ -96,10 +96,17 @@ import { PlacementComponent } from './placement/placement.component';
 import { PlacementListComponent } from './placement/placement-list.component';
 import { ComplaintComponent } from './complaint/complaint.component';
 import { ComplaintListComponent } from './complaint/complaint-list.component';
-import { InsuranceComponent } from './insurance/insurance.component';
-import { InsuranceListComponent } from './insurance/insurance-list.component';
 import { JobComponent } from './job/job.component';
 import { JobListComponent } from './job/job-list.component';
+import { InsuranceComponent } from './insurance/insurance.component';
+import { InsuranceListComponent } from './insurance/insurance-list.component';
+import { PhotographyComponent } from './photography/photography.component';
+import { PhotographyListComponent } from './photography/photography-list.component';
+import { DepartmentComponent } from './department/department.component';
+import { DepartmentListComponent } from './department/department-list.component';
+import { DeliveryComponent } from './delivery/delivery.component';
+import { DeliveryListComponent } from './delivery/delivery-list.component';
+
 
 
 
@@ -198,6 +205,12 @@ export function myHttpLoader(http: HttpClient) {
     InsuranceListComponent,
     JobComponent,
     JobListComponent,
+    PhotographyComponent,
+    PhotographyListComponent,
+    DepartmentComponent,
+    DepartmentListComponent,
+    DeliveryComponent,
+    DeliveryListComponent,
     
   ],
   imports: [

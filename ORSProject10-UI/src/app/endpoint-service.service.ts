@@ -42,6 +42,9 @@ export class EndpointServiceService {
   public ASSET = this.SERVER_URL + "/Asset";
   public PLACEMENT = this.SERVER_URL + "/Placement";
   public COMPLAINT = this.SERVER_URL + "/Complaint";
-  public INSURANCE = this.SERVER_URL + "/Insurance";
   public JOB = this.SERVER_URL + "/Job";
+  public INSURANCE = this.SERVER_URL + "/Insurance";
+  public PHOTOGRAPHY = this.SERVER_URL + "/Photography";
+  public DEPARTMENT = this.SERVER_URL + "/Department";
+  public DELIVERY = this.SERVER_URL + "/Delivery";
 }

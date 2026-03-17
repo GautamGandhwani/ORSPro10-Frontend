@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
 <div class="content-wrapper" style="padding-top: 7%;padding-bottom: 8%; 
-background: url(assets/files/wall.jpg) no-repeat center center;
+background: url(assets/files/teahub.png) no-repeat center center;
 background-repeat: no-repeat;
 background-attachment: fixed;
 background-size: cover;width:auto;
@@ -11,19 +11,19 @@ background-size: cover;width:auto;
       <div class="panel-heading" style="height: 50px;">
         <!-- <div class="col-sm-6 p-1 text-center"> -->
         <div class="text-center">
-          <h1 class="text-white font-weight-bold">{{'Insurance List' | translate}}</h1>
+          <h1 class="text-white font-weight-bold">{{ 'Photography List' | translate}}</h1>
         </div>
       </div>
 
       <div class="row  pt-4 pb-4 " style="margin-left:15%">
         <div class="col-sm-2">
-          <input type="text" class="form-control" [(ngModel)]="form.searchParams.policyNumber"
-            placeholder="{{'Search Policy Number'| translate}}">
+          <input type="text" class="form-control" [(ngModel)]="form.searchParams.clientName"
+            placeholder="{{'Search clientName'| translate}}">
         </div>
 
         <div class="col-sm-2">
-          <input type="date" class="form-control" [(ngModel)]="form.searchParams.expiryDate"
-            placeholder="{{'Search Expiry Date' | translate}}">
+          <input type="date" class="form-control" [(ngModel)]="form.searchParams.bookingDate"
+            placeholder="{{'Search bookingDate' | translate}}">
 
         </div>
 
@@ -31,13 +31,13 @@ background-size: cover;width:auto;
           <button (click)="submit()" class="btn btn-primary">
             {{'Search'| translate}}</button>
         </div>
-        &nbsp;&nbsp;&nbsp;
-        <div class="col-lg-2 ml-4">
-          <button (click)="forward('/insurance')" type="button" class="btn btn-success">{{'Add Insurance'|
+
+        <div class="col-sm-2 ml-3">
+          <button (click)="forward('/photography')" type="button" class="btn btn-success">{{'Add Photography'|
             translate}}
           </button>
         </div>
-        <div class="col-sm-1">
+        <div class="col-sm-1 ml-3">
           <button (click)="deleteMany()" class="btn btn-danger">
             {{'Delete'| translate}}</button>
         </div>
@@ -54,15 +54,16 @@ background-size: cover;width:auto;
 
       <div class="p-1">
         <div class="table-responsive">
-          <table class="table table-bordered table-hover font-weight-bold">
-            <thead class="thead-dark text-uppercase">
+          <table class="table table-bordered table-striped table-hover font-weight-bold text-white">
+            <thead class="thead-light text-uppercase">
               <tr align="center">
                 <th><input type="checkbox" [(ngModel)]="isMasterSel" name="list_name" value="h1"
                     (change)="checkUncheckAll($event)" /></th>
                 <th>{{'S.No'| translate}}</th>
-                <th>{{'Policy Number'| translate}}</th>
-                <th>{{'Premium Amount'| translate}}</th>
-                <th>{{'Expiry Date'| translate}}</th>
+                <th>{{'Client Name'| translate}}</th>
+                <th>{{'Event Type'| translate}}</th>
+                <th>{{'Booking Date'| translate}}</th>
+                <th>{{'Photographer Name'| translate}}</th>
                 <th>{{'Edit' | translate}}</th>
               </tr>
             </thead>
@@ -75,11 +76,12 @@ background-size: cover;width:auto;
                 </td>
                 <td> {{(form.pageNo*5)+i+ 1}} </td>
 
-                <td> {{ m.policyNumber}} </td>
-                <td> {{ m.premiumAmount}} </td>
-                <td> {{ m.expiryDate}} </td>
+                <td> {{ m.clientName}} </td>
+                <td> {{ m.eventType}} </td>
+                <td> {{ m.bookingDate}} </td>
+                <td> {{ m.photographerName }} </td>
                 <td>
-                  <a (click)="forward( '/insurance/' +  m.id)" style="cursor: pointer;">
+                  <a (click)="forward( '/photography/' +  m.id)" style="cursor: pointer;">
                     <i class="fa fa-edit text-info"></i>
                   </a>
 
@@ -99,13 +101,14 @@ background-size: cover;width:auto;
                 }} </button>
             </td>
             <div>
-              <a class="btn btn-warning mr-1" [routerLink]="['/insurancelist']" (click)="exit()">
+              <a class="btn btn-warning mr-1" [routerLink]="['/photographylist']" (click)="exit()">
                 {{ 'Reset' | translate }}
               </a>
             </div>
             <td *ngIf="form.list.length!=0" style="width: 50%;"></td>
             <td *ngIf="form.list.length==0" style="width: 50%;"><a class="btn btn-warning mr-1"
-                [routerLink]="['/insurancelist']" (click)="exit()">{{'Back' | translate}}</a></td>
+                [routerLink]="['/photographylist']" (click)="exit()">{{'Back' | translate}}</a></td>
+
             <td><button (click)="next()" [disabled]="nextList==0" type="button" class="btn btn-info"> {{'Next' |
                 translate }}</button></td>
           </tr>
