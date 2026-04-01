@@ -47,4 +47,6 @@ export class EndpointServiceService {
   public PHOTOGRAPHY = this.SERVER_URL + "/Photography";
   public DEPARTMENT = this.SERVER_URL + "/Department";
   public DELIVERY = this.SERVER_URL + "/Delivery";
+  public APILOG = this.SERVER_URL + "/APILog";
+  public INVESTOR = this.SERVER_URL + "/Investor";
 }

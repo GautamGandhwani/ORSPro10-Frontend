@@ -106,6 +106,10 @@ import { DepartmentComponent } from './department/department.component';
 import { DepartmentListComponent } from './department/department-list.component';
 import { DeliveryComponent } from './delivery/delivery.component';
 import { DeliveryListComponent } from './delivery/delivery-list.component';
+import { ApilogComponent } from './apilog/apilog.component';
+import { ApilogListComponent } from './apilog/apilog-list.component';
+import { InvestorComponent } from './investor/investor.component';
+import { InvestorListComponent } from './investor/investor-list.component';
 
 
 
@@ -211,6 +215,10 @@ export function myHttpLoader(http: HttpClient) {
     DepartmentListComponent,
     DeliveryComponent,
     DeliveryListComponent,
+    ApilogComponent,
+    ApilogListComponent,
+    InvestorComponent,
+    InvestorListComponent,
     
   ],
   imports: [

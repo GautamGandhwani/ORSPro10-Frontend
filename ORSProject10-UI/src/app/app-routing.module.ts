@@ -85,6 +85,10 @@ import { DepartmentComponent } from './department/department.component';
 import { DepartmentListComponent } from './department/department-list.component';
 import { DeliveryComponent } from './delivery/delivery.component';
 import { DeliveryListComponent } from './delivery/delivery-list.component';
+import { ApilogComponent } from './apilog/apilog.component';
+import { ApilogListComponent } from './apilog/apilog-list.component';
+import { InvestorComponent } from './investor/investor.component';
+import { InvestorListComponent } from './investor/investor-list.component';
 
 
 
@@ -104,6 +108,36 @@ const routes: Routes = [
     {
         path: 'employee',
         component: EmployeeComponent
+    },
+
+     // ***********INVESTOR*************
+
+    {
+        path: 'investor',
+        component: InvestorComponent
+    },
+    {
+        path: 'investorlist',
+        component: InvestorListComponent
+    },
+    {
+        path: 'investor/:id',
+        component: InvestorComponent
+    },
+
+    // ***********APILOG*************
+
+    {
+        path: 'apilog',
+        component: ApilogComponent
+    },
+    {
+        path: 'apiloglist',
+        component: ApilogListComponent
+    },
+    {
+        path: 'apilog/:id',
+        component: ApilogComponent
     },
 
     // ***********DELIVERY*************
