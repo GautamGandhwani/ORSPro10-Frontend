@@ -110,6 +110,16 @@ import { ApilogComponent } from './apilog/apilog.component';
 import { ApilogListComponent } from './apilog/apilog-list.component';
 import { InvestorComponent } from './investor/investor.component';
 import { InvestorListComponent } from './investor/investor-list.component';
+import { TicketComponent } from './ticket/ticket.component';
+import { TicketListComponent } from './ticket/ticket-list.component';
+import { LoannoteComponent } from './loannote/loannote.component';
+import { LoannoteListComponent } from './loannote/loannote-list.component';
+import { BlogComponent } from './blog/blog.component';
+import { BlogListComponent } from './blog/blog-list.component';
+import { VenueComponent } from './venue/venue.component';
+import { VenueListComponent } from './venue/venue-list.component';
+import { TimezoneComponent } from './timezone/timezone.component';
+import { TimezoneListComponent } from './timezone/timezone-list.component';
 
 
 
@@ -219,6 +229,16 @@ export function myHttpLoader(http: HttpClient) {
     ApilogListComponent,
     InvestorComponent,
     InvestorListComponent,
+    TicketComponent,
+    TicketListComponent,
+    LoannoteComponent,
+    LoannoteListComponent,
+    BlogComponent,
+    BlogListComponent,
+    VenueComponent,
+    VenueListComponent,
+    TimezoneComponent,
+    TimezoneListComponent,
     
   ],
   imports: [

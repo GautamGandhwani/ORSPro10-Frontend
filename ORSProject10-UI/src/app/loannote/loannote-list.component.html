@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
 <div class="content-wrapper" style="padding-top: 7%;padding-bottom: 8%; 
-background: url(assets/files/teahub.png) no-repeat center center;
+background: url(assets/files/wall.jpg) no-repeat center center;
 background-repeat: no-repeat;
 background-attachment: fixed;
 background-size: cover;width:auto;
@@ -11,14 +11,20 @@ background-size: cover;width:auto;
       <div class="panel-heading" style="height: 50px;">
         <!-- <div class="col-sm-6 p-1 text-center"> -->
         <div class="text-center">
-          <h1 class="text-white font-weight-bold">{{'Review List' | translate}}</h1>
+          <h1 class="text-white font-weight-bold">{{'Loan Note List' | translate}}</h1>
         </div>
       </div>
 
       <div class="row  pt-4 pb-4 " style="margin-left:15%">
         <div class="col-sm-2">
-          <input type="text" class="form-control" [(ngModel)]="form.searchParams.reviewName"
-            placeholder="{{'Search Review Name'| translate}}">
+          <input type="text" class="form-control" [(ngModel)]="form.searchParams.lenderName"
+            placeholder="{{'Search Lender Name'| translate}}">
+        </div>
+
+        <div class="col-sm-2">
+          <input type="date" class="form-control" [(ngModel)]="form.searchParams.maturityDate"
+            placeholder="{{'Search Maturity Date' | translate}}">
+
         </div>
 
         <div class="col-sm-1 ml-3">
@@ -27,7 +33,7 @@ background-size: cover;width:auto;
         </div>
         &nbsp;&nbsp;&nbsp;
         <div class="col-lg-2 ml-4">
-          <button (click)="forward('/review')" type="button" class="btn btn-success">{{'Add Inquiry'|
+          <button (click)="forward('/loannote')" type="button" class="btn btn-success">{{'Add Loan Note'|
             translate}}
           </button>
         </div>
@@ -48,34 +54,33 @@ background-size: cover;width:auto;
 
       <div class="p-1">
         <div class="table-responsive">
-          <table class="table table-bordered table-striped table-hover font-weight-bold text-white">
-            <thead class="thead-light text-uppercase">
-              <tr>
+          <table class="table table-bordered table-hover font-weight-bold">
+            <thead class="thead-dark text-uppercase">
+              <tr align="center">
                 <th><input type="checkbox" [(ngModel)]="isMasterSel" name="list_name" value="h1"
                     (change)="checkUncheckAll($event)" /></th>
                 <th>{{'S.No'| translate}}</th>
-                <th>{{'Review Name'| translate}}</th>
-                <th>{{'Rating'| translate}}</th>
-                <th>{{'Review Text'| translate}}</th>
-                <th>{{'Review Date'| translate}}</th>
+                <th>{{'Lender Name'| translate}}</th>
+                <th>{{'Loan Amount'| translate}}</th>
+                <th>{{'Interest Rate'| translate}}</th>
+                <th>{{'Maturity Date'| translate}}</th>
                 <th>{{'Edit' | translate}}</th>
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let m of form.list; let i = index">
+              <tr *ngFor="let m of form.list; let i = index" align="center">
                 <!-- <td> <input type="checkbox" name="list_name" value="{{isMasterSel}}" [(ngModel)]="isMasterSel" (change)="isAllSelected()"/>
                   </td> -->
                 <td> <input type="checkbox" #checkboxes (change)="checklistUpdate()" name="list_name" id="{{m.id}}"
                     value="{{isMasterSel}}" />
                 </td>
                 <td> {{(form.pageNo*5)+i+ 1}} </td>
-
-                <td> {{ m.reviewName}} </td>
-                <td> {{ m.rating}} </td>
-                <td> {{ m.reviewText}} </td>
-                <td> {{ m.reviewDate }} </td>
+                <td> {{ m.lenderName}} </td>
+                <td> {{ m.loanAmount}} </td>
+                <td> {{ m.interestRate}} </td>
+                <td> {{ m.maturityDate}} </td>
                 <td>
-                  <a (click)="forward( '/review/' +  m.id)" style="cursor: pointer;">
+                  <a (click)="forward( '/insurance/' +  m.id)" style="cursor: pointer;">
                     <i class="fa fa-edit text-info"></i>
                   </a>
 
@@ -95,14 +100,13 @@ background-size: cover;width:auto;
                 }} </button>
             </td>
             <div>
-              <a class="btn btn-warning mr-1" [routerLink]="['/reviewlist']" (click)="exit()">
+              <a class="btn btn-warning mr-1" [routerLink]="['/loannotelist']" (click)="exit()">
                 {{ 'Reset' | translate }}
               </a>
             </div>
             <td *ngIf="form.list.length!=0" style="width: 50%;"></td>
             <td *ngIf="form.list.length==0" style="width: 50%;"><a class="btn btn-warning mr-1"
-                [routerLink]="['/reviewlist']" (click)="exit()">{{'Back' | translate}}</a></td>
-
+                [routerLink]="['/loannotelist']" (click)="exit()">{{'Back' | translate}}</a></td>
             <td><button (click)="next()" [disabled]="nextList==0" type="button" class="btn btn-info"> {{'Next' |
                 translate }}</button></td>
           </tr>

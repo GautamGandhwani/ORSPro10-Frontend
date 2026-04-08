@@ -11,14 +11,14 @@ background-size: cover;width:auto;
       <div class="panel-heading" style="height: 50px;">
         <!-- <div class="col-sm-6 p-1 text-center"> -->
         <div class="text-center">
-          <h1 class="text-white font-weight-bold">{{'Review List' | translate}}</h1>
+          <h1 class="text-white font-weight-bold">{{'Ticket List' | translate}}</h1>
         </div>
       </div>
 
       <div class="row  pt-4 pb-4 " style="margin-left:15%">
         <div class="col-sm-2">
-          <input type="text" class="form-control" [(ngModel)]="form.searchParams.reviewName"
-            placeholder="{{'Search Review Name'| translate}}">
+          <input type="text" class="form-control" [(ngModel)]="form.searchParams.categoryName"
+            placeholder="{{'Search Category Name'| translate}}">
         </div>
 
         <div class="col-sm-1 ml-3">
@@ -27,7 +27,7 @@ background-size: cover;width:auto;
         </div>
         &nbsp;&nbsp;&nbsp;
         <div class="col-lg-2 ml-4">
-          <button (click)="forward('/review')" type="button" class="btn btn-success">{{'Add Inquiry'|
+          <button (click)="forward('/ticket')" type="button" class="btn btn-success">{{'Add Ticket'|
             translate}}
           </button>
         </div>
@@ -54,10 +54,9 @@ background-size: cover;width:auto;
                 <th><input type="checkbox" [(ngModel)]="isMasterSel" name="list_name" value="h1"
                     (change)="checkUncheckAll($event)" /></th>
                 <th>{{'S.No'| translate}}</th>
-                <th>{{'Review Name'| translate}}</th>
-                <th>{{'Rating'| translate}}</th>
-                <th>{{'Review Text'| translate}}</th>
-                <th>{{'Review Date'| translate}}</th>
+                <th>{{'Category Name'| translate}}</th>
+                <th>{{'Price'| translate}}</th>
+                <th>{{'Available Seats'| translate}}</th>
                 <th>{{'Edit' | translate}}</th>
               </tr>
             </thead>
@@ -70,12 +69,11 @@ background-size: cover;width:auto;
                 </td>
                 <td> {{(form.pageNo*5)+i+ 1}} </td>
 
-                <td> {{ m.reviewName}} </td>
-                <td> {{ m.rating}} </td>
-                <td> {{ m.reviewText}} </td>
-                <td> {{ m.reviewDate }} </td>
+                <td> {{ m.categoryName}} </td>
+                <td> {{ m.price}} </td>
+                <td> {{ m.availableSeats }} </td>
                 <td>
-                  <a (click)="forward( '/review/' +  m.id)" style="cursor: pointer;">
+                  <a (click)="forward( '/ticket/' +  m.id)" style="cursor: pointer;">
                     <i class="fa fa-edit text-info"></i>
                   </a>
 
@@ -95,21 +93,18 @@ background-size: cover;width:auto;
                 }} </button>
             </td>
             <div>
-              <a class="btn btn-warning mr-1" [routerLink]="['/reviewlist']" (click)="exit()">
+              <a class="btn btn-warning mr-1" [routerLink]="['/ticketlist']" (click)="exit()">
                 {{ 'Reset' | translate }}
               </a>
             </div>
             <td *ngIf="form.list.length!=0" style="width: 50%;"></td>
             <td *ngIf="form.list.length==0" style="width: 50%;"><a class="btn btn-warning mr-1"
-                [routerLink]="['/reviewlist']" (click)="exit()">{{'Back' | translate}}</a></td>
-
+                [routerLink]="['/ticketlist']" (click)="exit()">{{'Back' | translate}}</a></td>
             <td><button (click)="next()" [disabled]="nextList==0" type="button" class="btn btn-info"> {{'Next' |
                 translate }}</button></td>
           </tr>
         </table>
-
       </div>
-
     </div>
   </div>
   <app-footer></app-footer>

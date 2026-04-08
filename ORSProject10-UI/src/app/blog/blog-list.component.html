@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
 <div class="content-wrapper" style="padding-top: 7%;padding-bottom: 8%; 
-background: url(assets/files/teahub.png) no-repeat center center;
+background: url(assets/files/wall.jpg) no-repeat center center;
 background-repeat: no-repeat;
 background-attachment: fixed;
 background-size: cover;width:auto;
@@ -11,27 +11,37 @@ background-size: cover;width:auto;
       <div class="panel-heading" style="height: 50px;">
         <!-- <div class="col-sm-6 p-1 text-center"> -->
         <div class="text-center">
-          <h1 class="text-white font-weight-bold">{{'Review List' | translate}}</h1>
+          <h1 class="text-white font-weight-bold">{{'Blog List' | translate}}</h1>
         </div>
       </div>
 
       <div class="row  pt-4 pb-4 " style="margin-left:15%">
         <div class="col-sm-2">
-          <input type="text" class="form-control" [(ngModel)]="form.searchParams.reviewName"
-            placeholder="{{'Search Review Name'| translate}}">
+          <input type="text" class="form-control" [(ngModel)]="form.searchParams.title"
+            placeholder="{{'Search title'| translate}}">
+        </div>
+
+        <div class="col-sm-2">
+          <select class="form-control" name="status" [(ngModel)]="form.searchParams.status" aria-label="ngSelected"
+            required>
+            <option [ngValue]="undefined">{{ 'Select Complaint Status' | translate }}</option>
+            <option value="Published">{{ 'Published' | translate }}</option>
+            <option value="Draft">{{ 'Draft' | translate }}</option>
+            <option value="Pending">{{ 'Pending' | translate }}</option>
+          </select>
         </div>
 
         <div class="col-sm-1 ml-3">
           <button (click)="submit()" class="btn btn-primary">
             {{'Search'| translate}}</button>
         </div>
-        &nbsp;&nbsp;&nbsp;
-        <div class="col-lg-2 ml-4">
-          <button (click)="forward('/review')" type="button" class="btn btn-success">{{'Add Inquiry'|
+
+        <div class="col-sm-2 ml-3">
+          <button (click)="forward('/blog')" type="button" class="btn btn-success">{{'Add Blog' |
             translate}}
           </button>
         </div>
-        <div class="col-sm-1">
+        <div class="col-sm-1 ml-3">
           <button (click)="deleteMany()" class="btn btn-danger">
             {{'Delete'| translate}}</button>
         </div>
@@ -48,21 +58,21 @@ background-size: cover;width:auto;
 
       <div class="p-1">
         <div class="table-responsive">
-          <table class="table table-bordered table-striped table-hover font-weight-bold text-white">
+          <table class="table table-bordered table-striped table-hover font-weight-bold">
             <thead class="thead-light text-uppercase">
-              <tr>
+              <tr align="center">
                 <th><input type="checkbox" [(ngModel)]="isMasterSel" name="list_name" value="h1"
                     (change)="checkUncheckAll($event)" /></th>
                 <th>{{'S.No'| translate}}</th>
-                <th>{{'Review Name'| translate}}</th>
-                <th>{{'Rating'| translate}}</th>
-                <th>{{'Review Text'| translate}}</th>
-                <th>{{'Review Date'| translate}}</th>
+                <th>{{'Blog Code'| translate}}</th>
+                <th>{{'Title'| translate}}</th>
+                <th>{{'Author'| translate}}</th>
+                <th>{{'Status'| translate}}</th>
                 <th>{{'Edit' | translate}}</th>
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let m of form.list; let i = index">
+              <tr *ngFor="let m of form.list; let i = index" align="center">
                 <!-- <td> <input type="checkbox" name="list_name" value="{{isMasterSel}}" [(ngModel)]="isMasterSel" (change)="isAllSelected()"/>
                   </td> -->
                 <td> <input type="checkbox" #checkboxes (change)="checklistUpdate()" name="list_name" id="{{m.id}}"
@@ -70,12 +80,12 @@ background-size: cover;width:auto;
                 </td>
                 <td> {{(form.pageNo*5)+i+ 1}} </td>
 
-                <td> {{ m.reviewName}} </td>
-                <td> {{ m.rating}} </td>
-                <td> {{ m.reviewText}} </td>
-                <td> {{ m.reviewDate }} </td>
+                <td> {{ m.blogCode}} </td>
+                <td> {{ m.title}} </td>
+                <td> {{ m.author}} </td>
+                <td> {{ m.status }} </td>
                 <td>
-                  <a (click)="forward( '/review/' +  m.id)" style="cursor: pointer;">
+                  <a (click)="forward( '/blog/' +  m.id)" style="cursor: pointer;">
                     <i class="fa fa-edit text-info"></i>
                   </a>
 
@@ -95,15 +105,15 @@ background-size: cover;width:auto;
                 }} </button>
             </td>
             <div>
-              <a class="btn btn-warning mr-1" [routerLink]="['/reviewlist']" (click)="exit()">
+              <a class="btn btn-warning mr-1" [routerLink]="['/bloglist']" (click)="exit()">
                 {{ 'Reset' | translate }}
               </a>
             </div>
             <td *ngIf="form.list.length!=0" style="width: 50%;"></td>
             <td *ngIf="form.list.length==0" style="width: 50%;"><a class="btn btn-warning mr-1"
-                [routerLink]="['/reviewlist']" (click)="exit()">{{'Back' | translate}}</a></td>
+                [routerLink]="['/bloglist']" (click)="exit()">{{'Back' | translate}}</a></td>
 
-            <td><button (click)="next()" [disabled]="nextList==0" type="button" class="btn btn-info"> {{'Next' |
+            <td><button (click)="next()" [disabled]="nextList==0" type="button" class="btn btn-info"> {{'Next'|
                 translate }}</button></td>
           </tr>
         </table>

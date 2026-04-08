@@ -49,4 +49,9 @@ export class EndpointServiceService {
   public DELIVERY = this.SERVER_URL + "/Delivery";
   public APILOG = this.SERVER_URL + "/APILog";
   public INVESTOR = this.SERVER_URL + "/Investor";
+  public TICKET = this.SERVER_URL + "/Ticket";
+  public LOANNOTE = this.SERVER_URL + "/Loannote";
+  public BLOG = this.SERVER_URL + "/Blog";
+  public VENUE = this.SERVER_URL + "/Venue";
+  public TIMEZONE = this.SERVER_URL + "/Timezone";
 }

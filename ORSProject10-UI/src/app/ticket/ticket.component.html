@@ -20,9 +20,9 @@ background-size: cover;width:auto;
       <div class="card-body shadow-lg grad">
         <form>
           <h2 *ngIf="!form.data.id>0" class="text-primary font-weight-bold" style="text-align: center;">{{'Add
-            Compensation' | translate}}</h2>
+            Ticket' | translate}}</h2>
           <h2 *ngIf="form.data.id>0" class="text-primary font-weight-bold" style="text-align: center;">{{'Update
-            Compensation' | translate}}</h2>
+            Ticket' | translate}}</h2>
 
           <div *ngIf="!form.error && form.message != null" class="alert alert-success alert-dismissible">
             <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -34,87 +34,66 @@ background-size: cover;width:auto;
           </div>
 
           <div style="padding-top:3%">
-            <span class="pt-2"><b>{{'Staff Member' | translate}}</b>
+            <span class="pt-2"><b>{{'Category Name' | translate}}</b>
               <span class="required-field"></span></span>
             <div class="col-sm-12">
               <div class="input-group">
                 <div class="input-group-prepend">
                   <div class="input-group-text"><i class="fa fa-id-card grey-text"></i> </div>
                 </div>
-                <input type="text" name="staffMember" [(ngModel)]="form.data.staffMember" class="form-control"
-                  placeholder="{{'Enter Staff Member' | translate}}">
+                <input type="text" name="categoryName" [(ngModel)]="form.data.categoryName" class="form-control"
+                  placeholder="{{'Enter Category Name' | translate}}">
               </div>
             </div>
-            <span class="alertRedColor" style=" color: red;"> {{form.inputerror.staffMember}} </span>
+            <span class="alertRedColor" style=" color: red;"> {{form.inputerror.categoryName}} </span>
           </div>
 
           <div style="padding-top:3%">
-            <span class="pt-2"><b>{{'Payment Amount' | translate}}</b>
+            <span class="pt-2"><b>{{'Price' | translate}}</b>
               <span class="required-field"></span></span>
             <div class="col-sm-12">
               <div class="input-group">
                 <div class="input-group-prepend">
                   <div class="input-group-text"><i class="fa fa-check grey-text"></i> </div>
                 </div>
-                <input type="text" name="paymentAmount" [(ngModel)]="form.data.paymentAmount" class="form-control"
-                  placeholder="{{'Enter Payment Amount' | translate}}">
+                <input type="text" name="price" [(ngModel)]="form.data.price" class="form-control"
+                  placeholder="{{'Enter Price' | translate}}">
               </div>
             </div>
-            <span class="alertRedColor" style=" color: red;"> {{form.inputerror.paymentAmount}} </span>
+            <span class="alertRedColor" style=" color: red;"> {{form.inputerror.price}} </span>
           </div>
 
-           <div style="padding-top:3%">
-
-            <span class="pt-2"><b>{{'Date Applied' | translate }}</b>
-              <span class="required-field"></span></span>
-
-            <div class="col-sm-12">
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <div class="input-group-text"><i class="fa fa-table grey-text"></i> </div>
-                </div>
-                <input type="date" name="dateApplied" [value]="form.data.dateApplied | date:'yyyy-MM-dd'"
-                  (input)="form.data.dateApplied=parseDate($event.target.value)" class="form-control form-control-sm"
-                  required />
-              </div>
-            </div>
-            <span *ngIf="form.inputerror.dateApplied != null" class="alertRedColor" style=" color: red;"> {{'dateApplied'|
-              translate}} </span>
-            <!-- <span class="alertRedColor"> {{form.inputerror.dob}} </span> -->
-          </div>
 
           <div style="padding-top:3%">
-            <span class="pt-2"><b>{{'Status' | translate }}</b>
+            <span class="pt-2"><b>{{'Available Seats' | translate}}</b>
               <span class="required-field"></span></span>
-
             <div class="col-sm-12">
               <div class="input-group">
                 <div class="input-group-prepend">
-                  <div class="input-group-text"><i class="fa fa-venus grey-text"></i> </div>
+                  <div class="input-group-text"><i class="fa fa-check grey-text"></i> </div>
                 </div>
-                <select class="form-control" name="state" id="state" [(ngModel)]="form.data.state"
-                  style="cursor: pointer;">
-                  <option [ngValue]="" value="undefined">{{'Please select' | translate }}</option>
-                  <option value="Active">{{'Active' | translate }} </option>
-                  <option value="Inactive">{{'Inactive' | translate }} </option>
-                </select>
+                <input type="text" name="availableSeats" [(ngModel)]="form.data.availableSeats" class="form-control"
+                  placeholder="{{'Enter Available Seats' | translate}}">
               </div>
-            </div><span *ngIf="form.inputerror.state != null" class="alertRedColor" style=" color: red;"> {{'state'|
-              translate}} </span>
-            <!-- <span class="alertRedColor"> {{form.inputerror.gender}} </span> -->
+            </div>
+            <span class="alertRedColor" style=" color: red;"> {{form.inputerror.availableSeats}} </span>
           </div>
 
-          <div class="row pt-3 pl-3 pb-3">
+          <div class="row pt-2 pl-2 pb-3">
+            <div class="col-md-3"></div>
             <div class="pt-2">
               <button *ngIf="!form.data.id>0" (click)="submit()" class="btn btn-success mr-2">
                 {{'Save' | translate}}</button>
             </div>
+
+            <div class="col-md-1"></div>
+
             <div class="pt-2">
               <button *ngIf="form.data.id>0" (click)="submit()" class="btn btn-success mr-2">
                 {{'Update'| translate}}</button>
             </div>
             <div class="pt-2">
-              <button (click)="forward('/compensation')" type="button" class="btn btn-warning mr-1">{{'Back'|
+              <button (click)="forward('/ticketlist')" type="button" class="btn btn-warning mr-1">{{'List'|
                 translate}}
               </button>
             </div>
