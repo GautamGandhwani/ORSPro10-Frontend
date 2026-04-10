@@ -99,6 +99,10 @@ import { VenueComponent } from './venue/venue.component';
 import { VenueListComponent } from './venue/venue-list.component';
 import { TimezoneComponent } from './timezone/timezone.component';
 import { TimezoneListComponent } from './timezone/timezone-list.component';
+import { RidesharingComponent } from './ridesharing/ridesharing.component';
+import { RidesharingListComponent } from './ridesharing/ridesharing-list.component';
+import { LanguageComponent } from './language/language.component';
+import { LanguageListComponent } from './language/language-list.component';
 
 
 
@@ -118,6 +122,36 @@ const routes: Routes = [
     {
         path: 'employee',
         component: EmployeeComponent
+    },
+
+    // ***********LANGUAGE*************
+
+    {
+        path: 'language',
+        component: LanguageComponent
+    },
+    {
+        path: 'languagelist',
+        component: LanguageListComponent
+    },
+    {
+        path: 'language/:id',
+        component: LanguageComponent
+    },
+
+    // ***********RIDESHARING*************
+
+    {
+        path: 'ridesharing',
+        component: RidesharingComponent
+    },
+    {
+        path: 'ridesharinglist',
+        component: RidesharingListComponent
+    },
+    {
+        path: 'ridesharing/:id',
+        component: RidesharingComponent
     },
 
     // ***********TIMEZONE*************

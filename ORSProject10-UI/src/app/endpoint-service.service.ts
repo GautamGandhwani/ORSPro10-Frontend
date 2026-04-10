@@ -54,4 +54,6 @@ export class EndpointServiceService {
   public BLOG = this.SERVER_URL + "/Blog";
   public VENUE = this.SERVER_URL + "/Venue";
   public TIMEZONE = this.SERVER_URL + "/Timezone";
+  public RIDESHARING = this.SERVER_URL + "/Ridesharing";
+  public LANGUAGE = this.SERVER_URL + "/Language";
 }

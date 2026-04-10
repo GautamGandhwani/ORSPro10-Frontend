@@ -120,6 +120,10 @@ import { VenueComponent } from './venue/venue.component';
 import { VenueListComponent } from './venue/venue-list.component';
 import { TimezoneComponent } from './timezone/timezone.component';
 import { TimezoneListComponent } from './timezone/timezone-list.component';
+import { RidesharingComponent } from './ridesharing/ridesharing.component';
+import { RidesharingListComponent } from './ridesharing/ridesharing-list.component';
+import { LanguageComponent } from './language/language.component';
+import { LanguageListComponent } from './language/language-list.component';
 
 
 
@@ -239,6 +243,10 @@ export function myHttpLoader(http: HttpClient) {
     VenueListComponent,
     TimezoneComponent,
     TimezoneListComponent,
+    RidesharingComponent,
+    RidesharingListComponent,
+    LanguageComponent,
+    LanguageListComponent,
     
   ],
   imports: [
