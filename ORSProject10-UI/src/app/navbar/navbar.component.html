@@ -81,9 +81,27 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="nav navbar-nav ml-auto" style="padding-right: 5%;">
 
-      <!-- =================================== RIDESHARING =========================================== -->
+
+      <!-- =================================== DEBUG LOG =========================================== -->
 
       <li class="nav-item dropdown" style="padding-left: 5px">
+        <a class="nav-link dropdown-toggle" [routerLink]="['/#']" id="navbarDropdown" role="button"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <font style="color: white">{{ "Debug Log" | translate }}</font>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" [routerLink]="['/debuglog']"><i class="fa fa-calculator"></i> &nbsp;
+            {{ "Add Debug Log" | translate }}</a>
+          <a class="dropdown-item" [routerLink]="['/debugloglist']">
+            <i class="fa fa-list"></i> &nbsp;
+            {{ "Debug Log List" | translate }}
+          </a>
+        </div>
+      </li>
+
+      <!-- =================================== RIDESHARING =========================================== -->
+
+      <!-- <li class="nav-item dropdown" style="padding-left: 5px">
         <a class="nav-link dropdown-toggle" [routerLink]="['/#']" id="navbarDropdown" role="button"
           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <font style="color: white">{{ "Language" | translate }}</font>
@@ -96,7 +114,7 @@
             {{ "Language List" | translate }}
           </a>
         </div>
-      </li>
+      </li> -->
 
       <!-- =================================== RIDESHARING =========================================== -->
 

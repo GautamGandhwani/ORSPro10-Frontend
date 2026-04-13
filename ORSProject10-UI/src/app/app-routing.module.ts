@@ -103,6 +103,8 @@ import { RidesharingComponent } from './ridesharing/ridesharing.component';
 import { RidesharingListComponent } from './ridesharing/ridesharing-list.component';
 import { LanguageComponent } from './language/language.component';
 import { LanguageListComponent } from './language/language-list.component';
+import { DebuglogComponent } from './debuglog/debuglog.component';
+import { DebuglogListComponent } from './debuglog/debuglog-list.component';
 
 
 
@@ -122,6 +124,21 @@ const routes: Routes = [
     {
         path: 'employee',
         component: EmployeeComponent
+    },
+
+     // ***********DEBUG LOG*************
+
+    {
+        path: 'debuglog',
+        component: DebuglogComponent
+    },
+    {
+        path: 'debugloglist',
+        component: DebuglogListComponent
+    },
+    {
+        path: 'debuglog/:id',
+        component: DebuglogComponent
     },
 
     // ***********LANGUAGE*************
