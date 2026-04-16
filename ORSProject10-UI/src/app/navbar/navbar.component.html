@@ -81,10 +81,60 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="nav navbar-nav ml-auto" style="padding-right: 5%;">
 
+      <!-- =================================== ARTIFACT =========================================== -->
+
+      <li class="nav-item dropdown" style="padding-left: 5px">
+        <a class="nav-link dropdown-toggle" [routerLink]="['/#']" id="navbarDropdown" role="button"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <font style="color: white">{{ "Artifact" | translate }}</font>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" [routerLink]="['/artifact']"><i class="fa fa-calculator"></i> &nbsp;
+            {{ "Add Artifact" | translate }}</a>
+          <a class="dropdown-item" [routerLink]="['/artifactlist']">
+            <i class="fa fa-list"></i> &nbsp;
+            {{ "Artifact List" | translate }}
+          </a>
+        </div>
+      </li>
+
+      <!-- =================================== Encryption =========================================== -->
+
+      <!-- <li class="nav-item dropdown" style="padding-left: 5px">
+        <a class="nav-link dropdown-toggle" [routerLink]="['/#']" id="navbarDropdown" role="button"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <font style="color: white">{{ "Encryption" | translate }}</font>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" [routerLink]="['/encryption']"><i class="fa fa-calculator"></i> &nbsp;
+            {{ "Add Encryption" | translate }}</a>
+          <a class="dropdown-item" [routerLink]="['/encryptionlist']">
+            <i class="fa fa-list"></i> &nbsp;
+            {{ "Encryption List" | translate }}
+          </a>
+        </div>
+      </li> -->
+
+      <!-- =================================== APPOINTMENT =========================================== -->
+
+      <!-- <li class="nav-item dropdown" style="padding-left: 5px">
+        <a class="nav-link dropdown-toggle" [routerLink]="['/#']" id="navbarDropdown" role="button"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <font style="color: white">{{ "Appointment" | translate }}</font>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" [routerLink]="['/appointment']"><i class="fa fa-calculator"></i> &nbsp;
+            {{ "Add Appointment" | translate }}</a>
+          <a class="dropdown-item" [routerLink]="['/appointmentlist']">
+            <i class="fa fa-list"></i> &nbsp;
+            {{ "Appointment List" | translate }}
+          </a>
+        </div>
+      </li> -->
 
       <!-- =================================== DEBUG LOG =========================================== -->
 
-      <li class="nav-item dropdown" style="padding-left: 5px">
+      <!-- <li class="nav-item dropdown" style="padding-left: 5px">
         <a class="nav-link dropdown-toggle" [routerLink]="['/#']" id="navbarDropdown" role="button"
           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <font style="color: white">{{ "Debug Log" | translate }}</font>
@@ -97,7 +147,7 @@
             {{ "Debug Log List" | translate }}
           </a>
         </div>
-      </li>
+      </li> -->
 
       <!-- =================================== RIDESHARING =========================================== -->
 

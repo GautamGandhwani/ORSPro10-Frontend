@@ -57,4 +57,7 @@ export class EndpointServiceService {
   public RIDESHARING = this.SERVER_URL + "/Ridesharing";
   public LANGUAGE = this.SERVER_URL + "/Language";
   public DEBUGLOG = this.SERVER_URL + "/Debuglog";
+  public APPOINTMENT = this.SERVER_URL + "/Appointment";
+  public ENCRYPTION = this.SERVER_URL + "/Encryption";
+  public ARTIFACT = this.SERVER_URL + "/Artifact";
 }

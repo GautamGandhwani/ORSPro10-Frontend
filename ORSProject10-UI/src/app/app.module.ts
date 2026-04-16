@@ -126,6 +126,12 @@ import { LanguageComponent } from './language/language.component';
 import { LanguageListComponent } from './language/language-list.component';
 import { DebuglogComponent } from './debuglog/debuglog.component';
 import { DebuglogListComponent } from './debuglog/debuglog-list.component';
+import { AppointmentComponent } from './appointment/appointment.component';
+import { AppointmentListComponent } from './appointment/appointment-list.component';
+import { EncryptionComponent } from './encryption/encryption.component';
+import { EncryptionListComponent } from './encryption/encryption-list.component';
+import { ArtifactComponent } from './artifact/artifact.component';
+import { ArtifactListComponent } from './artifact/artifact-list.component';
 
 
 
@@ -251,6 +257,12 @@ export function myHttpLoader(http: HttpClient) {
     LanguageListComponent,
     DebuglogComponent,
     DebuglogListComponent,
+    AppointmentComponent,
+    AppointmentListComponent,
+    EncryptionComponent,
+    EncryptionListComponent,
+    ArtifactComponent,
+    ArtifactListComponent,
     
   ],
   imports: [

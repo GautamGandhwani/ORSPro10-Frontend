@@ -105,6 +105,12 @@ import { LanguageComponent } from './language/language.component';
 import { LanguageListComponent } from './language/language-list.component';
 import { DebuglogComponent } from './debuglog/debuglog.component';
 import { DebuglogListComponent } from './debuglog/debuglog-list.component';
+import { AppointmentComponent } from './appointment/appointment.component';
+import { AppointmentListComponent } from './appointment/appointment-list.component';
+import { EncryptionComponent } from './encryption/encryption.component';
+import { EncryptionListComponent } from './encryption/encryption-list.component';
+import { ArtifactComponent } from './artifact/artifact.component';
+import { ArtifactListComponent } from './artifact/artifact-list.component';
 
 
 
@@ -126,7 +132,52 @@ const routes: Routes = [
         component: EmployeeComponent
     },
 
-     // ***********DEBUG LOG*************
+    // ***********ARTIFACT*************
+
+    {
+        path: 'artifact',
+        component: ArtifactComponent
+    },
+    {
+        path: 'artifactlist',
+        component: ArtifactListComponent
+    },
+    {
+        path: 'artifact/:id',
+        component: ArtifactComponent
+    },
+
+    // ***********ENCRYPTION*************
+
+    {
+        path: 'encryption',
+        component: EncryptionComponent
+    },
+    {
+        path: 'encryptionlist',
+        component: EncryptionListComponent
+    },
+    {
+        path: 'encryption/:id',
+        component: EncryptionComponent
+    },
+
+    // ***********APPOINTMENT*************
+
+    {
+        path: 'appointment',
+        component: AppointmentComponent
+    },
+    {
+        path: 'appointmentlist',
+        component: AppointmentListComponent
+    },
+    {
+        path: 'appointment/:id',
+        component: AppointmentComponent
+    },
+
+    // ***********DEBUG LOG*************
 
     {
         path: 'debuglog',
