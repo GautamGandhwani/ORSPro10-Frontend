@@ -111,6 +111,8 @@ import { EncryptionComponent } from './encryption/encryption.component';
 import { EncryptionListComponent } from './encryption/encryption-list.component';
 import { ArtifactComponent } from './artifact/artifact.component';
 import { ArtifactListComponent } from './artifact/artifact-list.component';
+import { BillingComponent } from './billing/billing.component';
+import { BillingListComponent } from './billing/billing-list.component';
 
 
 
@@ -130,6 +132,21 @@ const routes: Routes = [
     {
         path: 'employee',
         component: EmployeeComponent
+    },
+
+    // ***********BILLING*************
+
+    {
+        path: 'billing',
+        component: BillingComponent
+    },
+    {
+        path: 'billinglist',
+        component: BillingListComponent
+    },
+    {
+        path: 'billing/:id',
+        component: BillingComponent
     },
 
     // ***********ARTIFACT*************

@@ -60,4 +60,5 @@ export class EndpointServiceService {
   public APPOINTMENT = this.SERVER_URL + "/Appointment";
   public ENCRYPTION = this.SERVER_URL + "/Encryption";
   public ARTIFACT = this.SERVER_URL + "/Artifact";
+  public BILLING = this.SERVER_URL + "/Billing";
 }

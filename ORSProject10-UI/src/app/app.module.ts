@@ -132,6 +132,8 @@ import { EncryptionComponent } from './encryption/encryption.component';
 import { EncryptionListComponent } from './encryption/encryption-list.component';
 import { ArtifactComponent } from './artifact/artifact.component';
 import { ArtifactListComponent } from './artifact/artifact-list.component';
+import { BillingComponent } from './billing/billing.component';
+import { BillingListComponent } from './billing/billing-list.component';
 
 
 
@@ -263,6 +265,8 @@ export function myHttpLoader(http: HttpClient) {
     EncryptionListComponent,
     ArtifactComponent,
     ArtifactListComponent,
+    BillingComponent,
+    BillingListComponent,
     
   ],
   imports: [
