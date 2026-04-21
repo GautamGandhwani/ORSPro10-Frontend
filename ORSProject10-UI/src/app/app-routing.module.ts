@@ -113,6 +113,10 @@ import { ArtifactComponent } from './artifact/artifact.component';
 import { ArtifactListComponent } from './artifact/artifact-list.component';
 import { BillingComponent } from './billing/billing.component';
 import { BillingListComponent } from './billing/billing-list.component';
+import { DataretentionComponent } from './dataretention/dataretention.component';
+import { DataretentionListComponent } from './dataretention/dataretention-list.component';
+import { ApikeyComponent } from './apikey/apikey.component';
+import { ApikeyListComponent } from './apikey/apikey-list.component';
 
 
 
@@ -133,6 +137,37 @@ const routes: Routes = [
         path: 'employee',
         component: EmployeeComponent
     },
+
+    // ***********APIKEY*************
+
+    {
+        path: 'apikey',
+        component: ApikeyComponent
+    },
+    {
+        path: 'apikeylist',
+        component: ApikeyListComponent
+    },
+    {
+        path: 'apikey/:id',
+        component: ApikeyComponent
+    },
+
+     // ***********DATARETENTION*************
+
+    {
+        path: 'dataretention',
+        component: DataretentionComponent
+    },
+    {
+        path: 'dataretentionlist',
+        component: DataretentionListComponent
+    },
+    {
+        path: 'dataretention/:id',
+        component: DataretentionComponent
+    },
+
 
     // ***********BILLING*************
 

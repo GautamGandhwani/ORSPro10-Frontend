@@ -134,6 +134,10 @@ import { ArtifactComponent } from './artifact/artifact.component';
 import { ArtifactListComponent } from './artifact/artifact-list.component';
 import { BillingComponent } from './billing/billing.component';
 import { BillingListComponent } from './billing/billing-list.component';
+import { DataretentionComponent } from './dataretention/dataretention.component';
+import { DataretentionListComponent } from './dataretention/dataretention-list.component';
+import { ApikeyComponent } from './apikey/apikey.component';
+import { ApikeyListComponent } from './apikey/apikey-list.component';
 
 
 
@@ -267,6 +271,10 @@ export function myHttpLoader(http: HttpClient) {
     ArtifactListComponent,
     BillingComponent,
     BillingListComponent,
+    DataretentionComponent,
+    DataretentionListComponent,
+    ApikeyComponent,
+    ApikeyListComponent,
     
   ],
   imports: [

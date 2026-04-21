@@ -61,4 +61,6 @@ export class EndpointServiceService {
   public ENCRYPTION = this.SERVER_URL + "/Encryption";
   public ARTIFACT = this.SERVER_URL + "/Artifact";
   public BILLING = this.SERVER_URL + "/Billing";
+  public DATARETENTION = this.SERVER_URL + "/Dataretention";
+  public APIKEY = this.SERVER_URL + "/Apikey";
 }
