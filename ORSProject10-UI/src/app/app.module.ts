@@ -138,6 +138,14 @@ import { DataretentionComponent } from './dataretention/dataretention.component'
 import { DataretentionListComponent } from './dataretention/dataretention-list.component';
 import { ApikeyComponent } from './apikey/apikey.component';
 import { ApikeyListComponent } from './apikey/apikey-list.component';
+import { AccesslogComponent } from './accesslog/accesslog.component';
+import { AccesslogListComponent } from './accesslog/accesslog-list.component';
+import { BlockComponent } from './block/block.component';
+import { BlockListComponent } from './block/block-list.component';
+import { ChangerequestComponent } from './changerequest/changerequest.component';
+import { ChangerequestListComponent } from './changerequest/changerequest-list.component';
+import { NotificationruleComponent } from './notificationrule/notificationrule.component';
+import { NotificationruleListComponent } from './notificationrule/notificationrule-list.component';
 
 
 
@@ -275,6 +283,14 @@ export function myHttpLoader(http: HttpClient) {
     DataretentionListComponent,
     ApikeyComponent,
     ApikeyListComponent,
+    AccesslogComponent,
+    AccesslogListComponent,
+    BlockComponent,
+    BlockListComponent,
+    ChangerequestComponent,
+    ChangerequestListComponent,
+    NotificationruleComponent,
+    NotificationruleListComponent,
     
   ],
   imports: [

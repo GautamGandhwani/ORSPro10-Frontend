@@ -63,4 +63,7 @@ export class EndpointServiceService {
   public BILLING = this.SERVER_URL + "/Billing";
   public DATARETENTION = this.SERVER_URL + "/Dataretention";
   public APIKEY = this.SERVER_URL + "/Apikey";
+  public ACCESSLOG = this.SERVER_URL + "/Accesslog";
+  public BLOCK = this.SERVER_URL + "/Block";
+  public NOTIFICATIONRULE = this.SERVER_URL + "/Notificationrule";
 }

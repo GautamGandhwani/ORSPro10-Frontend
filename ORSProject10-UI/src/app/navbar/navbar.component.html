@@ -81,9 +81,76 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="nav navbar-nav ml-auto" style="padding-right: 5%;">
 
-      <!-- =================================== APIKEY =========================================== -->
+      <!-- =================================== Change Request =========================================== -->
 
       <li class="nav-item dropdown" style="padding-left: 5px">
+        <a class="nav-link dropdown-toggle" [routerLink]="['/#']" id="navbarDropdown" role="button"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <font style="color: white">{{ "Notification Rule" | translate }}</font>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" [routerLink]="['/notificationrule']"><i class="fa fa-calculator"></i> &nbsp;
+            {{ "Add Notification Rule" | translate }}</a>
+          <a class="dropdown-item" [routerLink]="['/notificationrulelist']">
+            <i class="fa fa-list"></i> &nbsp;
+            {{ "Notification Rule List" | translate }}
+          </a>
+        </div>
+      </li>
+
+      <!-- =================================== Change Request =========================================== -->
+      <!-- <li class="nav-item dropdown" style="padding-left: 5px">
+        <a class="nav-link dropdown-toggle" [routerLink]="['/#']" id="navbarDropdown" role="button"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <font style="color: white">{{ "Change Request" | translate }}</font>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" [routerLink]="['/changerequest']"><i class="fa fa-calculator"></i> &nbsp;
+            {{ "Add Change Request" | translate }}</a>
+          <a class="dropdown-item" [routerLink]="['/changerequestlist']">
+            <i class="fa fa-list"></i> &nbsp;
+            {{ "Change Request List" | translate }}
+          </a>
+        </div>
+      </li> -->
+
+      <!-- =================================== BLOCK =========================================== -->
+
+      <!-- <li class="nav-item dropdown" style="padding-left: 5px">
+        <a class="nav-link dropdown-toggle" [routerLink]="['/#']" id="navbarDropdown" role="button"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <font style="color: white">{{ "Block" | translate }}</font>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" [routerLink]="['/block']"><i class="fa fa-calculator"></i> &nbsp;
+            {{ "Add Block" | translate }}</a>
+          <a class="dropdown-item" [routerLink]="['/blocklist']">
+            <i class="fa fa-list"></i> &nbsp;
+            {{ "Block List" | translate }}
+          </a>
+        </div>
+      </li> -->
+
+      <!-- =================================== APIKEY =========================================== -->
+
+      <!-- <li class="nav-item dropdown" style="padding-left: 5px">
+        <a class="nav-link dropdown-toggle" [routerLink]="['/#']" id="navbarDropdown" role="button"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <font style="color: white">{{ "Access Log" | translate }}</font>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" [routerLink]="['/accesslog']"><i class="fa fa-calculator"></i> &nbsp;
+            {{ "Add Access Log" | translate }}</a>
+          <a class="dropdown-item" [routerLink]="['/accessloglist']">
+            <i class="fa fa-list"></i> &nbsp;
+            {{ "Access Log List" | translate }}
+          </a>
+        </div>
+      </li> -->
+
+      <!-- =================================== APIKEY =========================================== -->
+
+      <!-- <li class="nav-item dropdown" style="padding-left: 5px">
         <a class="nav-link dropdown-toggle" [routerLink]="['/#']" id="navbarDropdown" role="button"
           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <font style="color: white">{{ "API Key" | translate }}</font>
@@ -96,7 +163,7 @@
             {{ "API Key List" | translate }}
           </a>
         </div>
-      </li>
+      </li> -->
 
       <!-- =================================== DATARETENTION =========================================== -->
 
