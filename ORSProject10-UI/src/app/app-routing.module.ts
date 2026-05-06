@@ -125,6 +125,8 @@ import { ChangerequestComponent } from './changerequest/changerequest.component'
 import { ChangerequestListComponent } from './changerequest/changerequest-list.component';
 import { NotificationruleComponent } from './notificationrule/notificationrule.component';
 import { NotificationruleListComponent } from './notificationrule/notificationrule-list.component';
+import { UsersessionComponent } from './usersession/usersession.component';
+import { UsersessionListComponent } from './usersession/usersession-list.component';
 
 
 
@@ -146,7 +148,22 @@ const routes: Routes = [
         component: EmployeeComponent
     },
 
-     // ***********Notification Rule*************
+    // ***********User Session*************
+
+    {
+        path: 'usersession',
+        component: UsersessionComponent
+    },
+    {
+        path: 'usersessionlist',
+        component: UsersessionListComponent
+    },
+    {
+        path: 'usersession/:id',
+        component: UsersessionComponent
+    },
+
+    // ***********Notification Rule*************
 
     {
         path: 'notificationrule',
@@ -160,8 +177,8 @@ const routes: Routes = [
         path: 'notificationrule/:id',
         component: NotificationruleComponent
     },
-    
-     // ***********Change Request*************
+
+    // ***********Change Request*************
 
     {
         path: 'changerequest',
@@ -175,8 +192,8 @@ const routes: Routes = [
         path: 'changerequest/:id',
         component: ChangerequestComponent
     },
-    
-     // ***********BLOCK*************
+
+    // ***********BLOCK*************
 
     {
         path: 'block',
@@ -191,7 +208,7 @@ const routes: Routes = [
         component: BlockComponent
     },
 
-     // ***********ACCESSLOG*************
+    // ***********ACCESSLOG*************
 
     {
         path: 'accesslog',
@@ -221,7 +238,7 @@ const routes: Routes = [
         component: ApikeyComponent
     },
 
-     // ***********DATARETENTION*************
+    // ***********DATARETENTION*************
 
     {
         path: 'dataretention',

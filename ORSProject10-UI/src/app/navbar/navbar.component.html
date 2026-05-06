@@ -81,9 +81,26 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="nav navbar-nav ml-auto" style="padding-right: 5%;">
 
-      <!-- =================================== Change Request =========================================== -->
+      <!-- =================================== User Session =========================================== -->
 
       <li class="nav-item dropdown" style="padding-left: 5px">
+        <a class="nav-link dropdown-toggle" [routerLink]="['/#']" id="navbarDropdown" role="button"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <font style="color: white">{{ "User Session" | translate }}</font>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" [routerLink]="['/usersession']"><i class="fa fa-calculator"></i> &nbsp;
+            {{ "Add User Session" | translate }}</a>
+          <a class="dropdown-item" [routerLink]="['/usersessionlist']">
+            <i class="fa fa-list"></i> &nbsp;
+            {{ "User Session List" | translate }}
+          </a>
+        </div>
+      </li>
+
+      <!-- =================================== Change Request =========================================== -->
+
+      <!-- <li class="nav-item dropdown" style="padding-left: 5px">
         <a class="nav-link dropdown-toggle" [routerLink]="['/#']" id="navbarDropdown" role="button"
           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <font style="color: white">{{ "Notification Rule" | translate }}</font>
@@ -96,7 +113,7 @@
             {{ "Notification Rule List" | translate }}
           </a>
         </div>
-      </li>
+      </li> -->
 
       <!-- =================================== Change Request =========================================== -->
       <!-- <li class="nav-item dropdown" style="padding-left: 5px">

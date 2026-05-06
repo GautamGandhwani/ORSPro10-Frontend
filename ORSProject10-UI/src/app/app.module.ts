@@ -146,6 +146,8 @@ import { ChangerequestComponent } from './changerequest/changerequest.component'
 import { ChangerequestListComponent } from './changerequest/changerequest-list.component';
 import { NotificationruleComponent } from './notificationrule/notificationrule.component';
 import { NotificationruleListComponent } from './notificationrule/notificationrule-list.component';
+import { UsersessionComponent } from './usersession/usersession.component';
+import { UsersessionListComponent } from './usersession/usersession-list.component';
 
 
 
@@ -291,6 +293,8 @@ export function myHttpLoader(http: HttpClient) {
     ChangerequestListComponent,
     NotificationruleComponent,
     NotificationruleListComponent,
+    UsersessionComponent,
+    UsersessionListComponent,
     
   ],
   imports: [

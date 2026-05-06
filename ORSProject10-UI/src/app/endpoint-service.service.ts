@@ -66,4 +66,5 @@ export class EndpointServiceService {
   public ACCESSLOG = this.SERVER_URL + "/Accesslog";
   public BLOCK = this.SERVER_URL + "/Block";
   public NOTIFICATIONRULE = this.SERVER_URL + "/Notificationrule";
+  public USERSESSION = this.SERVER_URL + "/Usersession";
 }
