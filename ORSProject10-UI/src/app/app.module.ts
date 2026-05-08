@@ -148,6 +148,10 @@ import { NotificationruleComponent } from './notificationrule/notificationrule.c
 import { NotificationruleListComponent } from './notificationrule/notificationrule-list.component';
 import { UsersessionComponent } from './usersession/usersession.component';
 import { UsersessionListComponent } from './usersession/usersession-list.component';
+import { ConfirmpasswordComponent } from './confirmpassword/confirmpassword.component';
+import { ConfirmpasswordListComponent } from './confirmpassword/confirmpassword-list.component';
+import { RegistrationComponent } from './registration/registration.component';
+import { RegistrationListComponent } from './registration/registration-list.component';
 
 
 
@@ -295,6 +299,10 @@ export function myHttpLoader(http: HttpClient) {
     NotificationruleListComponent,
     UsersessionComponent,
     UsersessionListComponent,
+    ConfirmpasswordComponent,
+    ConfirmpasswordListComponent,
+    RegistrationComponent,
+    RegistrationListComponent,
     
   ],
   imports: [

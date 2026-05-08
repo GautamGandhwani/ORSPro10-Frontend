@@ -127,6 +127,10 @@ import { NotificationruleComponent } from './notificationrule/notificationrule.c
 import { NotificationruleListComponent } from './notificationrule/notificationrule-list.component';
 import { UsersessionComponent } from './usersession/usersession.component';
 import { UsersessionListComponent } from './usersession/usersession-list.component';
+import { ConfirmpasswordComponent } from './confirmpassword/confirmpassword.component';
+import { ConfirmpasswordListComponent } from './confirmpassword/confirmpassword-list.component';
+import { RegistrationComponent } from './registration/registration.component';
+import { RegistrationListComponent } from './registration/registration-list.component';
 
 
 
@@ -146,6 +150,36 @@ const routes: Routes = [
     {
         path: 'employee',
         component: EmployeeComponent
+    },
+
+      // ***********RESISTRATION*************
+
+    {
+        path: 'registration',
+        component: RegistrationComponent
+    },
+    {
+        path: 'registrationlist',
+        component: RegistrationListComponent
+    },
+    {
+        path: 'registration/:id',
+        component: RegistrationComponent
+    },
+
+     // ***********CONFIRM PASSWORD*************
+
+    {
+        path: 'confirmpassword',
+        component: ConfirmpasswordComponent
+    },
+    {
+        path: 'confirmpasswordlist',
+        component: ConfirmpasswordListComponent
+    },
+    {
+        path: 'confirmpassword/:id',
+        component: ConfirmpasswordComponent
     },
 
     // ***********User Session*************

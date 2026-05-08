@@ -67,4 +67,6 @@ export class EndpointServiceService {
   public BLOCK = this.SERVER_URL + "/Block";
   public NOTIFICATIONRULE = this.SERVER_URL + "/Notificationrule";
   public USERSESSION = this.SERVER_URL + "/Usersession";
+  public CONFIRMPASSWORD = this.SERVER_URL + "/Confirmpassword";
+  public REGISTRATION = this.SERVER_URL + "/Registration";
 }

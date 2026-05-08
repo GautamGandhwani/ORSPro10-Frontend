@@ -81,9 +81,43 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="nav navbar-nav ml-auto" style="padding-right: 5%;">
 
-      <!-- =================================== User Session =========================================== -->
+      <!-- =================================== REGISTRATION =========================================== -->
 
       <li class="nav-item dropdown" style="padding-left: 5px">
+        <a class="nav-link dropdown-toggle" [routerLink]="['/#']" id="navbarDropdown" role="button"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <font style="color: white">{{ "Registration" | translate }}</font>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" [routerLink]="['/registration']"><i class="fa fa-calculator"></i> &nbsp;
+            {{ "Add Registration" | translate }}</a>
+          <a class="dropdown-item" [routerLink]="['/registrationlist']">
+            <i class="fa fa-list"></i> &nbsp;
+            {{ "Registration List" | translate }}
+          </a>
+        </div>
+      </li>
+
+      <!-- =================================== CONFIRM PASSWORD =========================================== -->
+
+      <!-- <li class="nav-item dropdown" style="padding-left: 5px">
+        <a class="nav-link dropdown-toggle" [routerLink]="['/#']" id="navbarDropdown" role="button"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <font style="color: white">{{ "Confirm Password" | translate }}</font>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" [routerLink]="['/confirmpassword']"><i class="fa fa-calculator"></i> &nbsp;
+            {{ "Add Confirm Password" | translate }}</a>
+          <a class="dropdown-item" [routerLink]="['/confirmpasswordlist']">
+            <i class="fa fa-list"></i> &nbsp;
+            {{ "Confirm Password List" | translate }}
+          </a>
+        </div>
+      </li> -->
+
+      <!-- =================================== User Session =========================================== -->
+
+      <!-- <li class="nav-item dropdown" style="padding-left: 5px">
         <a class="nav-link dropdown-toggle" [routerLink]="['/#']" id="navbarDropdown" role="button"
           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <font style="color: white">{{ "User Session" | translate }}</font>
@@ -96,7 +130,7 @@
             {{ "User Session List" | translate }}
           </a>
         </div>
-      </li>
+      </li> -->
 
       <!-- =================================== Change Request =========================================== -->
 
