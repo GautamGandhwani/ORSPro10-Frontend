@@ -131,6 +131,8 @@ import { ConfirmpasswordComponent } from './confirmpassword/confirmpassword.comp
 import { ConfirmpasswordListComponent } from './confirmpassword/confirmpassword-list.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { RegistrationListComponent } from './registration/registration-list.component';
+import { GenderComponent } from './gender/gender.component';
+import { GenderListComponent } from './gender/gender-list.component';
 
 
 
@@ -152,7 +154,22 @@ const routes: Routes = [
         component: EmployeeComponent
     },
 
-      // ***********RESISTRATION*************
+    // ***********GENDER*************
+
+    {
+        path: 'gender',
+        component: GenderComponent
+    },
+    {
+        path: 'genderlist',
+        component: GenderListComponent
+    },
+    {
+        path: 'gender/:id',
+        component: GenderComponent
+    },
+
+    // ***********RESISTRATION*************
 
     {
         path: 'registration',
@@ -167,7 +184,7 @@ const routes: Routes = [
         component: RegistrationComponent
     },
 
-     // ***********CONFIRM PASSWORD*************
+    // ***********CONFIRM PASSWORD*************
 
     {
         path: 'confirmpassword',

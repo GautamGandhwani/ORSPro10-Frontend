@@ -152,6 +152,8 @@ import { ConfirmpasswordComponent } from './confirmpassword/confirmpassword.comp
 import { ConfirmpasswordListComponent } from './confirmpassword/confirmpassword-list.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { RegistrationListComponent } from './registration/registration-list.component';
+import { GenderComponent } from './gender/gender.component';
+import { GenderListComponent } from './gender/gender-list.component';
 
 
 
@@ -303,6 +305,8 @@ export function myHttpLoader(http: HttpClient) {
     ConfirmpasswordListComponent,
     RegistrationComponent,
     RegistrationListComponent,
+    GenderComponent,
+    GenderListComponent,
     
   ],
   imports: [

@@ -69,4 +69,5 @@ export class EndpointServiceService {
   public USERSESSION = this.SERVER_URL + "/Usersession";
   public CONFIRMPASSWORD = this.SERVER_URL + "/Confirmpassword";
   public REGISTRATION = this.SERVER_URL + "/Registration";
+  public GENDER = this.SERVER_URL + "/Gender";
 }
