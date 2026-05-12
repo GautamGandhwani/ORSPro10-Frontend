@@ -133,6 +133,8 @@ import { RegistrationComponent } from './registration/registration.component';
 import { RegistrationListComponent } from './registration/registration-list.component';
 import { GenderComponent } from './gender/gender.component';
 import { GenderListComponent } from './gender/gender-list.component';
+import { SmartparkingComponent } from './smartparking/smartparking.component';
+import { SmartparkingListComponent } from './smartparking/smartparking-list.component';
 
 
 
@@ -152,6 +154,21 @@ const routes: Routes = [
     {
         path: 'employee',
         component: EmployeeComponent
+    },
+
+    // ***********SMART PARKING*************
+
+    {
+        path: 'smartparking',
+        component: SmartparkingComponent
+    },
+    {
+        path: 'smartparkinglist',
+        component: SmartparkingListComponent
+    },
+    {
+        path: 'smartparking/:id',
+        component: SmartparkingComponent
     },
 
     // ***********GENDER*************

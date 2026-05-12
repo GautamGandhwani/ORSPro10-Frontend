@@ -81,9 +81,26 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="nav navbar-nav ml-auto" style="padding-right: 5%;">
 
-      <!-- =================================== GENDER =========================================== -->
+ <!-- =================================== SMARTPARKING =========================================== -->
 
       <li class="nav-item dropdown" style="padding-left: 5px">
+        <a class="nav-link dropdown-toggle" [routerLink]="['/#']" id="navbarDropdown" role="button"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <font style="color: white">{{ "Smart Parking" | translate }}</font>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" [routerLink]="['/smartparking']"><i class="fa fa-calculator"></i> &nbsp;
+            {{ "Add Smart Parking" | translate }}</a>
+          <a class="dropdown-item" [routerLink]="['/smartparkinglist']">
+            <i class="fa fa-list"></i> &nbsp;
+            {{ "Smart Parking List" | translate }}
+          </a>
+        </div>
+      </li>
+
+      <!-- =================================== GENDER =========================================== -->
+
+      <!-- <li class="nav-item dropdown" style="padding-left: 5px">
         <a class="nav-link dropdown-toggle" [routerLink]="['/#']" id="navbarDropdown" role="button"
           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <font style="color: white">{{ "Gender" | translate }}</font>
@@ -96,7 +113,7 @@
             {{ "Gender List" | translate }}
           </a>
         </div>
-      </li>
+      </li> -->
 
       <!-- =================================== REGISTRATION =========================================== -->
 

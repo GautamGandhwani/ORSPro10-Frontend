@@ -154,6 +154,8 @@ import { RegistrationComponent } from './registration/registration.component';
 import { RegistrationListComponent } from './registration/registration-list.component';
 import { GenderComponent } from './gender/gender.component';
 import { GenderListComponent } from './gender/gender-list.component';
+import { SmartparkingComponent } from './smartparking/smartparking.component';
+import { SmartparkingListComponent } from './smartparking/smartparking-list.component';
 
 
 
@@ -307,6 +309,8 @@ export function myHttpLoader(http: HttpClient) {
     RegistrationListComponent,
     GenderComponent,
     GenderListComponent,
+    SmartparkingComponent,
+    SmartparkingListComponent,
     
   ],
   imports: [
